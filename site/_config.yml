@@ -1,0 +1,26 @@
+title: "Yan Shuo Tan"
+description: "Assistant Professor, Department of Statistics and Data Science, NUS"
+baseurl: ""
+url: "https://yanshuotan.github.io"
+
+# Build settings
+theme: null
+plugins:
+  - jekyll-seo-tag
+
+# Navigation order
+nav_pages:
+  - { title: "Home",         url: "/"             }
+  - { title: "Publications", url: "/publications/" }
+  - { title: "Talks",        url: "/talks/"        }
+  - { title: "Students",     url: "/students/"     }
+  - { title: "Teaching",     url: "/teaching/"     }
+  - { title: "Service",      url: "/service/"      }
+
+# CV link
+cv_url: "/assets/cv.pdf"   # place a compiled cv.pdf here
+
+exclude:
+  - "*.sh"
+  - Gemfile
+  - Gemfile.lock

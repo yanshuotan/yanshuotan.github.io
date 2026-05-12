@@ -1,0 +1,105 @@
+# misc.yaml
+# Teaching data has been moved to teaching.yaml
+
+appointments:
+  - title: "Assistant Professor"
+    institution: "National University of Singapore"
+    department: "Department of Statistics and Data Science"
+    location: "Singapore"
+    year_start: 2022
+    year_end: null
+    affiliations:
+      - "Faculty Affiliate, Institute of Data Science"
+      - "Faculty Affiliate, NUS AI Institute"
+  - title: "Neyman Visiting Assistant Professor"
+    institution: "University of California, Berkeley"
+    department: "Department of Statistics"
+    location: "Berkeley, USA"
+    year_start: 2020
+    year_end: 2021
+    notes: "Mentor: Prof. Bin Yu"
+  - title: "Post-doctoral Fellow"
+    institution: "University of California, Berkeley"
+    department: "Department of Statistics"
+    location: "Berkeley, USA"
+    year_start: 2021
+    year_end: 2022
+    notes: "Mentor: Prof. Bin Yu"
+  - title: "Post-doctoral Fellow"
+    institution: "University of California, Berkeley"
+    department: "Department of Statistics"
+    location: "Berkeley, USA"
+    year_start: 2018
+    year_end: 2019
+    notes: "Mentor: Prof. Bin Yu"
+  - title: "Patrick J. McGovern Research Fellow"
+    institution: "Simons Institute, University of California, Berkeley"
+    department: null
+    location: "Berkeley, USA"
+    year_start: 2018
+    year_end: 2018
+
+education:
+  - degree: "Ph.D., Mathematics"
+    institution: "University of Michigan"
+    location: "Ann Arbor, USA"
+    year_start: 2013
+    year_end: 2018
+    advisors:
+      - "Roman Vershynin"
+      - "Anna Gilbert"
+  - degree: "B.S., Mathematics (Honors)"
+    institution: "University of Chicago"
+    location: "Chicago, USA"
+    year_start: 2009
+    year_end: 2013
+    advisors: null
+
+grants:
+  - title: "MOE AcRF Tier 1 Grant (NUS Cross Faculty Grant)"
+    grant_number: "A-8004458-00-00"
+    amount: 250000
+    currency: SGD
+    funder: "Ministry of Education, Singapore"
+    year: 2026
+    year_end: null
+  - title: "MOE AcRF Tier 1 Grant"
+    grant_number: "A-8002498-00-00"
+    amount: 250000
+    currency: SGD
+    funder: "Ministry of Education, Singapore"
+    year: 2024
+    year_end: null
+  - title: "NUS Start-up Grant"
+    grant_number: "A-8000448-00-00"
+    amount: 180000
+    currency: SGD
+    funder: "National University of Singapore"
+    year: 2022
+    year_end: null
+
+awards:
+  - title: "NUS Inauguration Grant"
+    organization: "National University of Singapore"
+    year: 2022
+  - title: "US Junior Oberwolfach Fellowship"
+    organization: "Mathematisches Forschungsinstitut Oberwolfach"
+    year: 2019
+  - title: "Patrick J. McGovern Research Fellowship"
+    organization: "Simons Institute, University of California, Berkeley"
+    year: 2018
+  - title: "Paul R. Cohen Prize"
+    organization: "University of Chicago"
+    year: 2013
+    notes: "Awarded to graduating seniors with the highest record in mathematics (5 awarded per year)"
+  - title: "Phi Beta Kappa"
+    organization: "Phi Beta Kappa Society"
+    year: 2012
+
+research_interests:
+  summary: >
+    Theoretical and applied aspects of statistical machine learning and data science.
+  areas:
+    - "Theory and methodology for tree-based methods and ensembles"
+    - "Bayesian tree ensemble modeling"
+    - "In-context learning for tabular data"

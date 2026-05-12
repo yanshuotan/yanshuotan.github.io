@@ -1,0 +1,33 @@
+# profile.yaml
+# Personal info used across the CV and website.
+
+name: "Yan Shuo Tan"
+name_short: "Y. S. Tan"
+email: "yanshuo@nus.edu.sg"
+website: "https://yanshuotan.github.io"   # update to your GitHub Pages URL
+institution: "National University of Singapore"
+department: "Department of Statistics and Data Science"
+address: "Singapore"
+
+# For the CV header
+cv_links:
+  - label: "email"
+    icon: "\\faEnvelope"
+    url: "mailto:yanshuo@nus.edu.sg"
+    text: "yanshuo@nus.edu.sg"
+  - label: "website"
+    icon: "\\faHome"
+    url: "https://yanshuotan.github.io"
+    text: "yanshuotan.github.io"
+
+# Short bio for the website homepage
+bio: >
+  I am an Assistant Professor in the Department of Statistics and Data Science
+  at the National University of Singapore, and a Faculty Affiliate with the
+  Institute of Data Science and the NUS AI Institute. My research focuses on
+  theoretical and applied aspects of statistical machine learning and data
+  science, with a particular emphasis on tree-based methods and ensembles,
+  Bayesian tree ensemble modeling, and in-context learning for tabular data.
+
+# GitHub username (for GitHub Pages)
+github_username: "yanshuotan"   # update to your GitHub username

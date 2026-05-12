@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% seo %}
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="site-nav">
+      {% for item in site.nav_pages %}
+        <a href="{{ item.url | relative_url }}"
+           {% if page.url == item.url %}class="active"{% endif %}>
+          {{ item.title }}
+        </a>
+      {% endfor %}
+      {% if site.cv_url %}
+        <a href="{{ site.cv_url | relative_url }}" class="cv-link">CV</a>
+      {% endif %}
+    </nav>
+  </div>
+</header>
+
+<main class="container page-content">
+  {{ content }}
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>{{ site.title }} &middot; {{ site.description }}</p>
+  </div>
+</footer>
+
+</body>
+</html>

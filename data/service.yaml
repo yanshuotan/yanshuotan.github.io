@@ -1,0 +1,105 @@
+# service.yaml
+reviewing:
+  - venue: "Scandinavian Journal of Statistics"
+    type: journal
+    years: [2026]
+  - venue: "Annals of Statistics"
+    venue_short: "AoS"
+    type: journal
+    years: [2025]
+  - venue: "Journal of Machine Learning Research"
+    venue_short: "JMLR"
+    type: journal
+    years: [2025]
+  - venue: "Journal of the American Statistical Association"
+    venue_short: "JASA"
+    type: journal
+    years: [2024, 2025]
+  - venue: "Journal of the Royal Statistical Society: Series B"
+    venue_short: "JRSS-B"
+    type: journal
+    years: [2022, 2024]
+  - venue: "Biometrika"
+    type: journal
+    years: [2024]
+  - venue: "Journal of Data Science"
+    type: journal
+    years: [2024]
+  - venue: "Statistical Methods in Medical Research"
+    type: journal
+    years: [2025]
+  - venue: "Science China"
+    type: journal
+    years: [2025]
+  - venue: "IEEE Transactions on Information Theory"
+    venue_short: "IEEE TIT"
+    type: journal
+    years: [2023, 2026]
+  - venue: "Proceedings of the National Academy of Sciences"
+    venue_short: "PNAS"
+    type: journal
+    years: [2020]
+  - venue: "Annals of Applied Statistics"
+    venue_short: "AoAS"
+    type: journal
+    years: [2020]
+  - venue: "Information and Inference: A Journal of the IMA"
+    venue_short: "Information and Inference"
+    type: journal
+    years: [2019]
+  - venue: "SMAI Journal of Computational Mathematics"
+    type: journal
+    years: [2017]
+  - venue: "IMA Journal of Numerical Analysis"
+    type: journal
+    years: [2017]
+  - venue: "Conference on Neural Information Processing Systems"
+    venue_short: "NeurIPS"
+    type: conference
+    years: [2023, 2025]
+  - venue: "International Conference on Artificial Intelligence and Statistics"
+    venue_short: "AISTATS"
+    type: conference
+    years: [2021, 2024]
+  - venue: "Symposium on Discrete Algorithms"
+    venue_short: "SODA"
+    type: conference
+    years: [2019, 2020]
+  - venue: "Conference on Learning Theory"
+    venue_short: "COLT"
+    type: conference
+    years: [2018, 2019]
+  - venue: "Foundations of Computer Science"
+    venue_short: "FOCS"
+    type: conference
+    years: [2018]
+
+other_service:
+  - title: "Graduate Research Committee Member"
+    organization: "Department of Statistics and Data Science, National University of Singapore"
+    year_start: 2024
+    year_end: 2026
+  - title: "Co-organizer, FIM-IMS Joint Workshop on Mathematics for Data Science"
+    organization: "National University of Singapore"
+    year_start: 2026
+    year_end: 2026
+  - title: "Co-organizer, IMS New Researchers Conference Asia"
+    organization: "Institute of Mathematical Statistics"
+    year_start: 2026
+    year_end: 2026
+  - title: "Young Researcher Committee Member"
+    organization: "Bernoulli Society"
+    year_start: 2024
+    year_end: 2026
+  - title: "Group Meeting Organizer"
+    organization: "Yu Group, University of California, Berkeley"
+    year_start: 2020
+    year_end: 2020
+  - title: "Student Probability Seminar Organizer"
+    organization: "University of Michigan"
+    year_start: 2016
+    year_end: 2017
+  - title: "Student Geometry Seminar Organizer"
+    organization: "University of Michigan"
+    year_start: 2014
+    year_end: 2015

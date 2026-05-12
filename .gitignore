@@ -1,0 +1,19 @@
+# ── CV compilation outputs ────────────────────────────────────────────────────
+output/
+
+# ── Generated Jekyll data (recreated by generate_site.py in CI) ──────────────
+site/_data/
+
+# ── Jekyll build cache and output ────────────────────────────────────────────
+site/_site/
+site/.jekyll-cache/
+site/.bundle/
+site/vendor/
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store

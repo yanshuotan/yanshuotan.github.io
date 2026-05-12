@@ -1,0 +1,192 @@
+# talks.yaml
+talks:
+  - title: "Understanding the Statistical Gaps in Tree-Based Learning"
+    year_range: [2025, 2026]
+    related_paper: null
+    instances:
+      - venue: "Gouxionghui Seminar"
+        type: seminar
+        location: "Online"
+        year: 2025
+      - venue: "MBZUAI Seminar"
+        type: seminar
+        location: "Abu Dhabi, UAE"
+        year: 2026
+      - venue: "UniMelb Seminar"
+        type: seminar
+        location: "Melbourne, Australia"
+        year: 2026
+
+  - title: "Sparse Modeling Revisited: From Linear Models to LLMs"
+    year_range: [2025, 2025]
+    related_paper: null
+    instances:
+      - venue: "AIVP, RIKEN-AIP & A*STAR Joint Workshop"
+        type: workshop
+        location: "Tokyo, Japan"
+        year: 2025
+      - venue: "ICSDS"
+        type: conference
+        location: "Seville, Spain"
+        year: 2025
+
+  - title: "TabPFN: One Model to Rule Them All?"
+    year_range: [2025, 2025]
+    related_paper: zhang2025tabpfn
+    instances:
+      - venue: "EcoSta"
+        type: conference
+        location: "Tokyo, Japan"
+        year: 2025
+
+  - title: "Lessons on Mixing for Bayesian Additive Regression Trees"
+    year_range: [2025, 2025]
+    related_paper: tan2024computational
+    instances:
+      - venue: "BayesComp"
+        type: conference
+        location: "Singapore"
+        year: 2025
+      - venue: "Workshop on Efficient Sampling Algorithms for Complex Models, IMS"
+        type: workshop
+        location: "National University of Singapore, Singapore"
+        year: 2025
+
+  - title: "Statistical-Computational Trade-offs for Recursive Adaptive Partitioning Estimators"
+    year_range: [2024, 2025]
+    related_paper: tan2024statistical
+    instances:
+      - venue: "One World MINDS Seminar"
+        type: seminar
+        location: "Online"
+        year: 2025
+      - venue: "Renmin University of China International Forum on Statistics"
+        type: seminar
+        location: "Beijing, China"
+        year: 2025
+      - venue: "INFORMS International Meeting"
+        type: conference
+        location: "Singapore"
+        year: 2024
+      - venue: "RIKEN-AIP Deep Learning Theory Team Seminar"
+        type: seminar
+        location: "Tokyo, Japan"
+        year: 2024
+
+  - title: "A Mixing Time Lower Bound for a Simplified Version of BART"
+    year_range: [2022, 2024]
+    related_paper: ronen2022mixing
+    instances:
+      - venue: "Workshop on Optimization in the Big Data Era, IMS"
+        type: workshop
+        location: "National University of Singapore, Singapore"
+        year: 2024
+      - venue: "BIRS Workshop on Harnessing the Power of Latent Structure Models and Modern Big Data Learning"
+        type: workshop
+        location: "Hangzhou, China"
+        year: 2023
+      - venue: "IMS Asia-Pacific Rim Meeting"
+        type: conference
+        location: "Melbourne, Australia"
+        year: 2023
+      - venue: "Workshop on the Mathematics of Data, IMS"
+        type: workshop
+        location: "National University of Singapore, Singapore"
+        year: 2022
+
+  - title: "MDI+: A Flexible Random Forest-Based Feature Importance Framework"
+    year_range: [2023, 2023]
+    related_paper: agarwal2023mdi
+    instances:
+      - venue: "Young Mathematical Scientists Forum, IMS"
+        type: seminar
+        location: "National University of Singapore, Singapore"
+        year: 2023
+
+  - title: "Understanding and Overcoming the Statistical Limitations of Decision Trees"
+    year_range: [2022, 2023]
+    related_paper: tan2022cautionary
+    instances:
+      - venue: "Neyman Seminar, Department of Statistics"
+        type: seminar
+        location: "University of California, Berkeley, USA"
+        year: 2023
+      - venue: "Department Seminar, Department of Statistics and Data Science"
+        type: seminar
+        location: "National University of Singapore, Singapore"
+        year: 2022
+      - venue: "Workshop on Machine Learning and its Applications, IMS"
+        type: workshop
+        location: "National University of Singapore, Singapore"
+        year: 2022
+      - venue: "Workshop on Information Theory and Data Science, IMS"
+        type: workshop
+        location: "National University of Singapore, Singapore"
+        year: 2022
+      - venue: "ESD Research Seminar"
+        type: seminar
+        location: "Singapore University of Technology and Design, Singapore"
+        year: 2022
+
+  - title: "Stable Discovery of Interpretable Subgroups via Calibration in Causal Studies"
+    year_range: [2020, 2022]
+    related_paper: dwivedi2020stable
+    instances:
+      - venue: "Bernoulli-IMS Young Researchers Pre-meeting"
+        type: conference
+        location: "Seoul, South Korea"
+        year: 2022
+      - venue: "ICSA Canada Chapter Symposium"
+        type: conference
+        location: "Banff, Canada"
+        year: 2022
+      - venue: "Causal Inference Research Group Seminar"
+        type: seminar
+        location: "University of California, Berkeley, USA"
+        year: 2021
+      - venue: "Biostatistics Seminar"
+        type: seminar
+        location: "University of California, Berkeley, USA"
+        year: 2020
+
+  - title: "Implicit Regularization for Constant Step-Size SGD: Why It Works for Non-Smooth, Non-Convex, Low Rank Models"
+    year_range: [2019, 2019]
+    related_paper: tan2023online
+    instances:
+      - venue: "Foundations of Data Science Program Reunion Workshop, Simons Institute"
+        type: workshop
+        location: "Berkeley, USA"
+        year: 2019
+      - venue: "AMS Spring Central and Western Joint Sectional Meeting, Special Session on Sparsity, Randomness, and Optimization"
+        type: conference
+        location: "Honolulu, USA"
+        year: 2019
+      - venue: "ACO Seminar"
+        type: seminar
+        location: "University of California, Irvine, USA"
+        year: 2019
+
+  - title: "Efficient Algorithms for Phase Retrieval in High Dimensions"
+    year_range: [2017, 2018]
+    related_paper: tan2019phase
+    instances:
+      - venue: "BLISS Seminar"
+        type: seminar
+        location: "University of California, Berkeley, USA"
+        year: 2018
+      - venue: "Math-FLDS Seminar"
+        type: seminar
+        location: "University of Southern California, USA"
+        year: 2018
+      - venue: "Probability Seminar"
+        type: seminar
+        location: "University of California, Irvine, USA"
+        year: 2017
+      - venue: "ARC-TRIAD Seminar"
+        type: seminar
+        location: "Georgia Institute of Technology, USA"
+        year: 2017
+      - venue: "SILO Seminar"
+        type: seminar
+        location: "University of Wisconsin, USA"
+        year: 2017

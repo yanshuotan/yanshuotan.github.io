@@ -1,0 +1,654 @@
+# publications.yaml
+# Source of truth for all publications.
+#
+# ── Schema ──────────────────────────────────────────────────────────────────
+#
+#   key          - BibTeX key
+#   title        - Full title
+#   year         - Publication / preprint year (null if unknown)
+#   type         - journal | conference | preprint | thesis | other
+#
+#   status       - One of:
+#                    published       fully published
+#                    accepted        accepted, to appear (in press)
+#                    preprint        posted preprint, not yet accepted
+#
+#   review_status  (preprints only) - null | under_review | minor_revision |
+#                                     major_revision | RR
+#
+#   authors      - List of author objects:
+#                    name          "Last, First" — use this exact form
+#                    equal         true → equal contribution / alphabetical order
+#                    supervised    true → student or postdoc I supervised/co-supervised
+#                    corresponding true → corresponding author
+#
+#   venue        - Full venue name
+#   venue_short  - Abbreviated venue for CV display (optional)
+#   volume, number, pages - Journal metadata (optional)
+#   publisher    - Publisher (optional)
+#   arxiv        - arXiv ID, e.g. "2307.01932" (optional)
+#   doi          - DOI string (optional)
+#   url          - Direct link to paper (optional)
+#
+#   awards       - List of award/distinction strings (optional)
+#   notes        - Free-text notes (optional)
+#
+# ────────────────────────────────────────────────────────────────────────────
+
+publications:
+
+  # ── In Preparation ──────────────────────────────────────────────────────────
+
+  - key: xu2025early
+    title: "On Early Stopping and Ideal Spatial Adaptation for CART"
+    authors:
+      - name: "Xu, Zineng"
+        supervised: true
+      - name: "Cai, Yuchao"
+        supervised: true
+      - name: "Tan, Yan Shuo"
+        corresponding: true
+    year: null
+    type: inprep
+    status: preprint
+    review_status: null
+
+  - key: singh2025agentic
+    title: "AGENTIC-IMODELS: Evolving Interpretability Tools for Agents"
+    authors:
+      - name: "Singh, Chandan"
+      - name: "Tan, Yan Shuo"
+      - name: "Xu, Weijia"
+      - name: "Gero, Zelalem"
+      - name: "Yang, Weiwei"
+      - name: "Galley, Michel"
+      - name: "Gao, Jianfeng"
+    year: null
+    type: inprep
+    status: preprint
+    review_status: null
+
+  - key: deng2025contextual
+    title: "Solving Contextual Bandits via Efficient Online Uncertainty Quantification with Tabular Foundation Models"
+    authors:
+      - name: "Deng, Ruizhe"
+        supervised: true
+      - name: "Loganathan, Sumetha"
+        supervised: true
+      - name: "Ng, Kenyon"
+      - name: "Chakraborty, Bibhas"
+      - name: "Zhang, Qiong"
+        supervised: true
+      - name: "Tan, Yan Shuo"
+        corresponding: true
+    year: null
+    type: inprep
+    status: preprint
+    review_status: null
+
+  - key: zhao2025uncertainty
+    title: "Uncertainty Evaluation and Calibration for Tabular Foundation Models"
+    authors:
+      - name: "Zhao, Tianqi"
+        supervised: true
+      - name: "Zhang, Qiong"
+        supervised: true
+        equal: true
+      - name: "Tan, Yan Shuo"
+        equal: true
+    year: null
+    type: inprep
+    status: preprint
+    review_status: null
+
+  # ── 2026 ────────────────────────────────────────────────────────────────────
+
+  - key: xu2026statistical
+    title: "On the Statistical Optimality of Optimal Decision Trees"
+    authors:
+      - name: "Xu, Zineng"
+        supervised: true
+      - name: "Ghosh, Subhroshekhar"
+        equal: true
+      - name: "Tan, Yan Shuo"
+        equal: true
+    year: 2026
+    type: preprint
+    status: preprint
+    review_status: under_review
+    venue: "arXiv preprint"
+    arxiv: "2603.05340"
+    url: "https://arxiv.org/abs/2603.05340"
+    notes: "Submitted to Annals of Statistics"
+
+  - key: zhao2026tabclustpfn
+    title: "TabClustPFN: A Prior-Fitted Network for Tabular Data Clustering"
+    authors:
+      - name: "Zhao, Tianqi"
+        supervised: true
+      - name: "Wang, Guanyang"
+      - name: "Tan, Yan Shuo"
+      - name: "Zhang, Qiong"
+        supervised: true
+    year: 2026
+    type: preprint
+    status: preprint
+    review_status: under_review
+    venue: "arXiv preprint"
+    arxiv: "2601.21656"
+    url: "https://arxiv.org/abs/2601.21656"
+    notes: "Submitted to ICML"
+
+  - key: feng2026human
+    title: "Human-AI Co-design for Clinical Prediction Models"
+    authors:
+      - name: "Feng, Jean"
+      - name: "Kothari, Avni"
+      - name: "Vossler, Patrick"
+      - name: "Bishara, Andrew"
+      - name: "Zier, Lucas"
+      - name: "Addo, Newton"
+      - name: "Kornblith, Aaron"
+      - name: "Tan, Yan Shuo"
+      - name: "Singh, Chandan"
+    year: 2026
+    type: preprint
+    status: preprint
+    review_status: major_revision
+    venue: "arXiv preprint"
+    arxiv: "2601.09072"
+    url: "https://arxiv.org/abs/2601.09072"
+    notes: "Major revision at Nature Digital Medicine"
+
+  - key: deng2026bfts
+    title: "BFTS: Thompson Sampling with Bayesian Additive Regression Trees"
+    authors:
+      - name: "Deng, Ruizhe"
+        supervised: true
+      - name: "Chakraborty, Bibhas"
+        equal: true
+      - name: "Chen, Ran"
+        equal: true
+      - name: "Tan, Yan Shuo"
+        equal: true
+        corresponding: true
+    year: 2026
+    type: conference
+    status: published
+    venue: "International Conference on Machine Learning"
+    venue_short: "ICML"
+    arxiv: "2602.07767"
+    url: "https://arxiv.org/abs/2602.07767"
+    awards:
+      - "Spotlight"
+
+  # ── 2025 ────────────────────────────────────────────────────────────────────
+
+  - key: tan2025fast
+    title: "Fast Interpretable Greedy-Tree Sums"
+    authors:
+      - name: "Tan, Yan Shuo"
+      - name: "Singh, Chandan"
+      - name: "Nasseri, Keyan"
+      - name: "Agarwal, Abhineet"
+      - name: "Duncan, James"
+      - name: "Ronen, Omer"
+      - name: "Epland, Matthew"
+      - name: "Kornblith, Aaron"
+      - name: "Yu, Bin"
+    year: 2025
+    type: journal
+    status: published
+    venue: "Proceedings of the National Academy of Sciences"
+    venue_short: "PNAS"
+    volume: 122
+    number: 7
+    pages: "e2310151122"
+    publisher: "National Academy of Sciences"
+
+  - key: feng2025bayesian
+    title: "Bayesian Concept Bottleneck Models with LLM Priors"
+    authors:
+      - name: "Feng, Jean"
+      - name: "Kothari, Avni"
+      - name: "Zier, Luke"
+      - name: "Singh, Chandan"
+      - name: "Tan, Yan Shuo"
+    year: 2025
+    type: conference
+    status: published
+    venue: "Advances in Neural Information Processing Systems"
+    venue_short: "NeurIPS"
+    url: "https://arxiv.org/abs/2410.15555"
+
+  - key: jin2025see
+    title: "See-in-Pairs: Reference Image-Guided Comparative Vision-Language Models for Medical Diagnosis"
+    authors:
+      - name: "Jin, Ruinan"
+      - name: "Huang, Gexin"
+      - name: "Shen, Xinwei"
+      - name: "Zhang, Qiong"
+        supervised: true
+      - name: "Tan, Yan Shuo"
+      - name: "Li, Xiaoxiao"
+    year: 2025
+    type: preprint
+    status: preprint
+    review_status: under_review
+    venue: "arXiv preprint"
+    arxiv: "2506.18140"
+    url: "https://arxiv.org/abs/2506.18140"
+    notes: "Submitted to Medical Image Analysis"
+
+  - key: zhang2025tabpfn
+    title: "TabPFN: One Model to Rule Them All?"
+    authors:
+      - name: "Zhang, Qiong"
+        supervised: true
+        equal: true
+      - name: "Tan, Yan Shuo"
+        equal: true
+      - name: "Tian, Qinglong"
+        equal: true
+      - name: "Li, Pengfei"
+    year: 2025
+    type: preprint
+    status: preprint
+    review_status: major_revision
+    venue: "arXiv preprint"
+    arxiv: "2505.20003"
+    url: "https://arxiv.org/abs/2505.20003"
+    notes: "Major revision at Journal of the American Statistical Association"
+
+  - key: chen2025revisiting
+    title: "Revisiting Randomization in Greedy Model Search"
+    authors:
+      - name: "Chen, Xin"
+        supervised: true
+        equal: true
+      - name: "Klusowski, Jason M"
+        equal: true
+      - name: "Tan, Yan Shuo"
+        equal: true
+      - name: "Yu, Chang"
+        equal: true
+    year: 2025
+    type: preprint
+    status: preprint
+    review_status: under_review
+    venue: "arXiv preprint"
+    arxiv: "2506.15643"
+    url: "https://arxiv.org/abs/2506.15643"
+    notes: "Submitted to ICML"
+
+  # ── 2024 ────────────────────────────────────────────────────────────────────
+
+  - key: tan2024statistical
+    title: "Statistical-Computational Trade-offs for Recursive Adaptive Partitioning Estimators"
+    authors:
+      - name: "Tan, Yan Shuo"
+      - name: "Klusowski, Jason M"
+      - name: "Balasubramanian, Krishnakumar"
+    year: 2026
+    type: journal
+    status: published
+    venue: "Annals of Statistics"
+    venue_short: "AoS"
+    arxiv: "2411.04394"
+    url: "https://arxiv.org/abs/2411.04394"
+
+  - key: tan2024computational
+    title: "The Computational Curse of Big Data for Bayesian Additive Regression Trees: A Hitting Time Analysis"
+    authors:
+      - name: "Tan, Yan Shuo"
+      - name: "Ronen, Omer"
+      - name: "Saarinen, Theo"
+      - name: "Yu, Bin"
+    year: 2024
+    type: preprint
+    status: preprint
+    review_status: RR
+    venue: "arXiv preprint"
+    arxiv: "2406.19958"
+    url: "https://arxiv.org/abs/2406.19958"
+    notes: "R&R at Annals of Statistics"
+
+  - key: zhang2024byzantine
+    title: "Byzantine-Tolerant Distributed Learning of Finite Mixture Models"
+    authors:
+      - name: "Zhang, Qiong"
+        supervised: true
+        equal: true
+      - name: "Tan, Yan Shuo"
+        equal: true
+      - name: "Chen, Jiahua"
+    year: 2026
+    type: journal
+    status: published
+    venue: "Journal of the Royal Statistical Society, Series B"
+    venue_short: "JRSS-B"
+    arxiv: "2407.13980"
+    url: "https://arxiv.org/abs/2407.13980"
+
+  # ── 2023 ────────────────────────────────────────────────────────────────────
+
+  - key: tan2023online
+    title: "Online Stochastic Gradient Descent with Arbitrary Initialization Solves Non-Smooth, Non-Convex Phase Retrieval"
+    authors:
+      - name: "Tan, Yan Shuo"
+      - name: "Vershynin, Roman"
+    year: 2023
+    type: journal
+    status: published
+    venue: "Journal of Machine Learning Research"
+    venue_short: "JMLR"
+    volume: 24
+    number: 58
+    pages: "1--47"
+    url: "https://arxiv.org/abs/1910.12837"
+
+  - key: agarwal2023mdi
+    title: "Integrating Random Forests and Generalized Linear Models for Improved Accuracy and Interpretability"
+    authors:
+      - name: "Agarwal, Abhineet"
+        equal: true
+      - name: "Kenney, Ana M"
+        equal: true
+      - name: "Tan, Yan Shuo"
+        equal: true
+      - name: "Tang, Tiffany M"
+        equal: true
+      - name: "Yu, Bin"
+    year: 2023
+    type: preprint
+    status: preprint
+    review_status: RR
+    venue: "arXiv preprint"
+    arxiv: "2307.01932"
+    url: "https://arxiv.org/abs/2307.01932"
+    notes: "R&R at Journal of Machine Learning Research"
+
+  - key: chen2023error
+    title: "Error Reduction from Stacked Regressions"
+    authors:
+      - name: "Chen, Xin"
+        supervised: true
+        equal: true
+      - name: "Klusowski, Jason M"
+        equal: true
+      - name: "Tan, Yan Shuo"
+        equal: true
+    year: 2023
+    type: preprint
+    status: preprint
+    review_status: under_review
+    venue: "arXiv preprint"
+    arxiv: "2309.09880"
+    url: "https://arxiv.org/abs/2309.09880"
+    notes: "Submitted to Journal of the American Statistical Association"
+
+  - key: lipor2023erratum
+    title: "Erratum to: Subspace Clustering Using Ensembles of K-Subspaces"
+    authors:
+      - name: "Lipor, John"
+      - name: "Hong, David"
+      - name: "Tan, Yan Shuo"
+      - name: "Balzano, Laura"
+    year: 2023
+    type: journal
+    status: published
+    venue: "Information and Inference: A Journal of the IMA"
+    venue_short: "Information and Inference"
+    volume: 12
+    number: 1
+    pages: "590--590"
+    publisher: "Oxford University Press"
+    notes: "Erratum"
+
+  # ── 2022 ────────────────────────────────────────────────────────────────────
+
+  - key: agarwal2022hierarchical
+    title: "Hierarchical Shrinkage: Improving the Accuracy and Interpretability of Tree-Based Models"
+    authors:
+      - name: "Agarwal, Abhineet"
+        equal: true
+      - name: "Tan, Yan Shuo"
+        equal: true
+      - name: "Ronen, Omer"
+      - name: "Singh, Chandan"
+      - name: "Yu, Bin"
+    year: 2022
+    type: conference
+    status: published
+    venue: "International Conference on Machine Learning"
+    venue_short: "ICML"
+    pages: "111--135"
+    publisher: "PMLR"
+    url: "https://arxiv.org/abs/2202.00858"
+    awards:
+      - "Long presentation"
+
+  - key: tan2022cautionary
+    title: "A Cautionary Tale on Fitting Decision Trees to Data from Additive Models: Generalization Lower Bounds"
+    authors:
+      - name: "Tan, Yan Shuo"
+      - name: "Agarwal, Abhineet"
+      - name: "Yu, Bin"
+    year: 2022
+    type: conference
+    status: published
+    venue: "International Conference on Artificial Intelligence and Statistics"
+    venue_short: "AISTATS"
+    pages: "9663--9685"
+    publisher: "PMLR"
+    url: "https://arxiv.org/abs/2110.09626"
+
+  - key: ronen2022mixing
+    title: "A Mixing Time Lower Bound for a Simplified Version of BART"
+    authors:
+      - name: "Ronen, Omer"
+        equal: true
+      - name: "Saarinen, Theo"
+        equal: true
+      - name: "Tan, Yan Shuo"
+        equal: true
+      - name: "Duncan, James"
+      - name: "Yu, Bin"
+    year: 2022
+    type: preprint
+    status: preprint
+    review_status: null
+    venue: "arXiv preprint"
+    arxiv: "2210.09352"
+    url: "https://arxiv.org/abs/2210.09352"
+
+  # ── 2021 ────────────────────────────────────────────────────────────────────
+
+  - key: altieri2021curating
+    title: "Curating a COVID-19 Data Repository and Forecasting County-Level Death Counts in the United States"
+    authors:
+      - name: "Altieri, Nick"
+        equal: true
+      - name: "Barter, Rebecca L"
+        equal: true
+      - name: "Duncan, James"
+        equal: true
+      - name: "Dwivedi, Raaz"
+        equal: true
+      - name: "Kumbier, Karl"
+        equal: true
+      - name: "Li, Xiao"
+        equal: true
+      - name: "Netzorg, Robert"
+        equal: true
+      - name: "Park, Briton"
+        equal: true
+      - name: "Singh, Chandan"
+        equal: true
+      - name: "Tan, Yan Shuo"
+        equal: true
+      - name: "Tang, Tiffany"
+        equal: true
+      - name: "Wang, Yu"
+        equal: true
+      - name: "Zhang, Chao"
+        equal: true
+      - name: "Yu, Bin"
+        equal: true
+    year: 2020
+    type: journal
+    status: published
+    venue: "Harvard Data Science Review"
+    venue_short: "HDSR"
+    url: "https://hdsr.mitpress.mit.edu/pub/p6isyf0g/release/4"
+    notes: "Author list alphabetical"
+
+  - key: singh2021imodels
+    title: "imodels: A Python Package for Fitting Interpretable Models"
+    authors:
+      - name: "Singh, Chandan"
+      - name: "Nasseri, Keyan"
+      - name: "Tan, Yan Shuo"
+      - name: "Tang, Tiffany"
+      - name: "Yu, Bin"
+    year: 2021
+    type: journal
+    status: published
+    venue: "Journal of Open Source Software"
+    venue_short: "JOSS"
+    volume: 6
+    number: 61
+    pages: "3192"
+    url: "https://joss.theoj.org/papers/10.21105/joss.03192"
+
+  - key: lipor2021subspace
+    title: "Subspace Clustering Using Ensembles of K-Subspaces"
+    authors:
+      - name: "Lipor, John"
+      - name: "Hong, David"
+      - name: "Tan, Yan Shuo"
+      - name: "Balzano, Laura"
+    year: 2021
+    type: journal
+    status: published
+    venue: "Information and Inference: A Journal of the IMA"
+    venue_short: "Information and Inference"
+    volume: 10
+    number: 1
+    pages: "73--107"
+    publisher: "Oxford University Press"
+    url: "https://academic.oup.com/imaiai/advance-article-abstract/doi/10.1093/imaiai/iaaa031/5999493"
+
+  # ── 2020 ────────────────────────────────────────────────────────────────────
+
+  - key: dwivedi2020stable
+    title: "Stable Discovery of Interpretable Subgroups via Calibration in Causal Studies"
+    authors:
+      - name: "Dwivedi, Raaz"
+        equal: true
+      - name: "Tan, Yan Shuo"
+        equal: true
+      - name: "Park, Briton"
+      - name: "Wei, Mian"
+      - name: "Horgan, Kevin"
+      - name: "Madigan, David"
+      - name: "Yu, Bin"
+    year: 2020
+    type: journal
+    status: published
+    venue: "International Statistical Review"
+    venue_short: "ISR"
+    volume: 88
+    pages: "S135--S178"
+    url: "https://arxiv.org/pdf/2008.10109.pdf"
+    notes: "Invited for a special issue"
+
+  # ── 2019 ────────────────────────────────────────────────────────────────────
+
+  - key: tan2019phase
+    title: "Phase Retrieval via Randomized Kaczmarz: Theoretical Guarantees"
+    authors:
+      - name: "Tan, Yan Shuo"
+      - name: "Vershynin, Roman"
+    year: 2019
+    type: journal
+    status: published
+    venue: "Information and Inference: A Journal of the IMA"
+    venue_short: "Information and Inference"
+    volume: 8
+    number: 1
+    pages: "97--123"
+    publisher: "Oxford University Press"
+    url: "https://academic.oup.com/imaiai/article/8/1/97/4959059"
+
+  # ── 2018 ────────────────────────────────────────────────────────────────────
+
+  - key: tan2018polynomial
+    title: "Polynomial Time and Sample Complexity for Non-Gaussian Component Analysis: Spectral Methods"
+    authors:
+      - name: "Tan, Yan Shuo"
+      - name: "Vershynin, Roman"
+    year: 2018
+    type: conference
+    status: published
+    venue: "Conference on Learning Theory"
+    venue_short: "COLT"
+    pages: "498--534"
+    publisher: "PMLR"
+    url: "http://proceedings.mlr.press/v75/tan18a.html"
+
+  - key: tan2018some
+    title: "Some Algorithms and Paradigms for Big Data"
+    authors:
+      - name: "Tan, Yan Shuo"
+    year: 2018
+    type: thesis
+    status: published
+    venue: "PhD Thesis"
+    notes: "PhD dissertation, University of Michigan"
+
+  # ── 2017 ────────────────────────────────────────────────────────────────────
+
+  - key: tan2017energy
+    title: "Energy Optimization for Distributions on the Sphere and Improvement to the Welch Bounds"
+    authors:
+      - name: "Tan, Yan Shuo"
+    year: 2017
+    type: journal
+    status: published
+    venue: "Electronic Communications in Probability"
+    venue_short: "ECP"
+    url: "https://projecteuclid.org/euclid.ecp/1502762749"
+
+  - key: tan2017sparse
+    title: "Sparse Phase Retrieval via Sparse PCA Despite Model Misspecification: A Simplified and Extended Analysis"
+    authors:
+      - name: "Tan, Yan Shuo"
+    year: 2017
+    type: preprint
+    status: preprint
+    review_status: null
+    venue: "arXiv preprint"
+    arxiv: "1712.04106"
+    url: "https://arxiv.org/abs/1712.04106"
+
+  # ── Other ───────────────────────────────────────────────────────────────────
+
+  - key: tan2011diameter
+    title: "On the Diameter of Cayley Graphs of Finite Groups"
+    authors:
+      - name: "Tan, Yan Shuo"
+    year: 2011
+    type: other
+    status: published
+    venue: "University of Chicago VIGRE REU"
+    notes: "Undergraduate research report"
+
+  - key: tanskeleton
+    title: "A Skeleton in the Category: The Secret Theory of Covering Spaces"
+    authors:
+      - name: "Tan, Yan Shuo"
+    year: null
+    type: other
+    status: published
+    notes: "Expository note"

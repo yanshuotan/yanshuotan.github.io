@@ -1,0 +1,262 @@
+% cv.tex — Auto-generated from YAML data. Do not edit directly.
+% Regenerate with: make cv  (or: python3 scripts/generate_cv.py)
+\documentclass[margin,centered]{res}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{color,xcolor,enumitem}
+
+\hypersetup{
+  colorlinks=true, urlcolor=black, linkcolor=black,
+  pdftitle={CV --- << profile.name >>},
+}
+
+% ── Author markers ──────────────────────────────────────────────────────────
+\newcommand{\eqc}{*}        % equal contribution / alphabetical ordering
+\newcommand{\sv}{\dagger}   % student / postdoc supervised
+\newcommand{\corr}{\ddagger} % corresponding author
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\textwidth=6.0in
+\itemsep=0in
+\parsep=0in
+
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+\begin{document}
+
+\name{\Large \sc{<< profile.name >>}}
+\address{%
+\\[-3mm]
+<% for link in profile.cv_links %>
+\href{<< link.url >>}{{\footnotesize << link.text >>}}%
+<% if not loop.last %>\quad<% endif %>
+<% endfor %>
+}
+
+\begin{resume}
+
+% ── Academic Appointments ────────────────────────────────────────────────────
+\section{\sc Academic \\ Appointments}
+<% for appt in misc.appointments %>
+{\bf << appt.title | esc >>}\hfill \emph{<< appt.year_start >>---%
+<% if appt.year_end %><<appt.year_end>><% endif %>}\\[1mm]
+<% if appt.department %>
+<< appt.department | esc >>, << appt.institution | esc >>\\[-3mm]
+<% else %>
+<< appt.institution | esc >>\\[-3mm]
+<% endif %>
+<% if appt.affiliations or appt.notes %>
+\begin{itemize}\itemsep0em
+<% for aff in (appt.affiliations or []) %>
+\item << aff | esc >>
+<% endfor %>
+<% if appt.notes %>
+\item \emph{<< appt.notes | esc >>}
+<% endif %>
+\end{itemize}
+<% endif %>
+<% endfor %>
+
+% ── Education ────────────────────────────────────────────────────────────────
+\section{\sc Education}
+<% for edu in misc.education %>
+{\bf << edu.degree | esc >>}\hfill \emph{<< edu.year_start >>---<< edu.year_end >>}\\[1mm]
+\quad << edu.institution | esc >>, << edu.location | esc >>\\[-3mm]
+<% if edu.advisors %>
+\begin{itemize}\itemsep0em
+\item Advisor<% if edu.advisors|length > 1 %>s<% endif %>: \emph{<% for adv in edu.advisors %>Prof.\ << adv | esc >><% if not loop.last %> \& <% endif %><% endfor %>}
+\end{itemize}
+<% endif %>
+<% endfor %>
+
+% ── Research Interests ───────────────────────────────────────────────────────
+\section{\sc Research \\ Interests}
+<< misc.research_interests.summary | esc >>\\[-2mm]
+\begin{itemize}
+<% for area in misc.research_interests.areas %>
+\item << area | esc >>
+<% endfor %>
+\end{itemize}
+
+% ── Grants ───────────────────────────────────────────────────────────────────
+\section{\sc Grants}
+<% for grant in misc.grants %>
+<< grant.title | esc >> \texttt{<< grant.grant_number >>}, \$<< "{:,}".format(grant.amount) >>\hfill\emph{<< grant.year >>}
+
+<% endfor %>
+
+% ── Achievements & Awards ────────────────────────────────────────────────────
+\section{\sc Achievements \\ \& Awards}
+<% for award in misc.awards %>
+<< award.title | esc >>\hfill\emph{<< award.year >>}
+<% if award.notes %>
+\\\textit{\small << award.notes | esc >>}
+<% endif %>
+
+<% endfor %>
+
+% ── Journal Publications ─────────────────────────────────────────────────────
+\section{\sc Journal \\ Publications}
+{\footnotesize ($\eqc$~equal contribution or alphabetical ordering,\;
+$\sv$~student/postdoc supervised)}
+
+\begin{enumerate}\itemsep0.3em
+<% for pub in journal_pubs %>
+  \item << pub.authors | fmt_author_list >>,
+    <% if pub.url %>
+    \href{<< pub.url >>}{``<< pub.title | esc >>''},
+    <% else %>
+    ``<< pub.title | esc >>'',
+    <% endif %>
+    << pub | fmt_venue >>%
+    <% if pub.awards %>\;[\textbf{<% for a in pub.awards %><< a | esc >><% if not loop.last %>; <% endif %><% endfor %>}]<% endif %>.
+
+<% endfor %>
+\end{enumerate}
+
+% ── Conference Publications ──────────────────────────────────────────────────
+\section{\sc Conference \\ Publications}
+
+\begin{enumerate}\itemsep0.3em
+  \setcounter{enumi}{<< journal_pubs|length >>}
+<% for pub in conf_pubs %>
+  \item << pub.authors | fmt_author_list >>,
+    <% if pub.url %>
+    \href{<< pub.url >>}{``<< pub.title | esc >>''},
+    <% else %>
+    ``<< pub.title | esc >>'',
+    <% endif %>
+    << pub | fmt_venue >>%
+    <% if pub.awards %>\;[\textbf{<% for a in pub.awards %><< a | esc >><% if not loop.last %>; <% endif %><% endfor %>}]<% endif %>.
+
+<% endfor %>
+\end{enumerate}
+
+% ── Preprints ────────────────────────────────────────────────────────────────
+\section{\sc Preprints}
+
+\begin{enumerate}\itemsep0.3em
+  \setcounter{enumi}{<< journal_pubs|length + conf_pubs|length >>}
+<% for pub in preprints %>
+  \item << pub.authors | fmt_author_list >>,
+    <% if pub.url or pub.arxiv %>
+    \href{<< pub.url if pub.url else "https://arxiv.org/abs/" ~ pub.arxiv >>}{``<< pub.title | esc >>''},
+    <% else %>
+    ``<< pub.title | esc >>'',
+    <% endif %>
+    << pub | fmt_venue >>.
+
+<% endfor %>
+\end{enumerate}
+
+% ── In Preparation ───────────────────────────────────────────────────────────
+<% if inprep_pubs %>
+\section{\sc In \\ Preparation}
+
+\begin{enumerate}\itemsep0.3em
+  \setcounter{enumi}{<< journal_pubs|length + conf_pubs|length + preprints|length >>}
+<% for pub in inprep_pubs %>
+  \item << pub.authors | fmt_author_list >>,
+    ``<< pub.title | esc >>''.
+
+<% endfor %>
+\end{enumerate}
+<% endif %>
+
+% ── Invited Talks ────────────────────────────────────────────────────────────
+\section{\sc Invited Talks}
+
+\begin{enumerate}[label=(\arabic*)]\itemsep0.4em
+<% for talk in talks %>
+  \item << talk.title | esc >>
+    \hfill{%
+    <% if talk.year_range[0] == talk.year_range[1] %>\emph{<< talk.year_range[0] >>}%
+    <% else %>\emph{<< talk.year_range[0] >>--<< talk.year_range[1] >>}%
+    <% endif %>}\vspace*{-.05in}
+    \begin{itemize}\itemsep0em
+    <% for inst in talk.instances %>
+    \item << inst.venue | esc >>, << inst.location | esc >>
+    <% endfor %>
+    \end{itemize}
+
+<% endfor %>
+\end{enumerate}
+
+% ── Teaching Experience ───────────────────────────────────────────────────────
+\section{\sc Teaching \\ Experience}
+<% set ns = namespace(prev_inst="") %>
+<% for course in teaching %>
+<% if course.institution != ns.prev_inst %>
+<% if not loop.first %>\vspace{-3mm}<% endif %>
+\textbf{<< course.institution | esc >>} \hfill \emph{<< course.semesters[0].split()[(-1)] >>--}\\
+<% set ns.prev_inst = course.institution %>
+<% endif %>
+\begin{itemize}
+\item <% if course.course_code %>\textbf{<< course.course_code | esc >>}: <% endif %><< course.title | esc >> (<< course.semesters | join(", ") | esc >>)
+<% if course.description or course.notes %>
+\vspace{-1mm}
+\begin{itemize}\itemsep0em
+  <% if course.description %>\item \small << course.description | esc >><% endif %>
+  <% if course.notes %>\item \small << course.notes | esc >><% endif %>
+\end{itemize}
+<% endif %>
+\end{itemize}
+<% endfor %>
+\vspace{-3mm}
+
+% ── Academic Services ────────────────────────────────────────────────────────
+\section{\sc Academic \\ Services}
+
+\textbf{Students Advised}
+\begin{itemize}\itemsep0em
+<% for s in students.students %>
+\item << s.name | esc >> (<< s.degree >>)%
+<% if s.coadvisor %>, \textit{co-advised with << s.coadvisor | esc >>}<% endif %>
+\hfill{\emph{<< s.year_start >>--<< s.year_end >><% if s.expected %> (expected)<% endif %>}}
+<% endfor %>
+\end{itemize}
+
+<% if students.thesis_advisory_committee %>
+\textbf{Thesis Advisory Committee}
+\begin{itemize}\itemsep0em
+<% for t in students.thesis_advisory_committee %>
+  \item << t.name | esc >> (<< t.institution | esc >>)
+  \hfill{\emph{<< t.year_start >>--<< t.year_end >><% if t.expected %> (expected)<% endif %>}}
+<% endfor %>
+\end{itemize}
+<% endif %>
+
+<% if students.mentoring %>
+\textbf{Other Mentoring}
+\begin{itemize}\itemsep0em
+<% for m in students.mentoring %>
+  \item << m.title | esc >>, << m.organization | esc >>
+  \hfill{\emph{<< m.year_start >><% if m.year_end %>--<< m.year_end >><% endif %>}}
+<% endfor %>
+\end{itemize}
+<% endif %>
+
+\textbf{Reviewing Activities}
+\begin{itemize}\itemsep0em
+<% for r in (service.reviewing | sort(attribute='venue')) %>
+\item << r.venue | esc >> \hfill{\emph{<< r.years | sort | join(", ") >>}}
+<% endfor %>
+\end{itemize}
+
+\textbf{Other Service}
+\begin{itemize}\itemsep0em
+<% for s in service.other_service %>
+\item << s.title | esc >>, << s.organization | esc >>
+  \hfill{\emph{<< s.year_start >><% if s.year_end %>--<< s.year_end >><% endif %>}}
+<% endfor %>
+\end{itemize}
+
+\end{resume}
+\end{document}

@@ -1,0 +1,146 @@
+# students.yaml
+students:
+  - name: "Duan Shuo"
+    degree: BS
+    institution: "National University of Singapore"
+    year_start: 2026
+    year_end: 2028
+    expected: true
+    coadvisor: null
+    thesis_title: null
+    current_position: null
+
+  - name: "Zhao Yaya"
+    degree: PhD
+    institution: "Renmin University of China"
+    year_start: 2025
+    year_end: 2026
+    expected: true
+    coadvisor: null
+    notes: "Visiting student"
+    thesis_title: null
+    current_position: null
+
+  - name: "Le Thi Hong Ha"
+    degree: PhD
+    institution: "National University of Singapore"
+    year_start: 2025
+    year_end: 2029
+    expected: true
+    coadvisor: null
+    thesis_title: null
+    current_position: null
+
+  - name: "Martin Eppert"
+    degree: PhD
+    institution: "National University of Singapore"
+    year_start: 2025
+    year_end: 2029
+    expected: true
+    coadvisor: "Subhroshekhar Ghosh"
+    thesis_title: null
+    current_position: null
+
+  - name: "Sumetha Loganathan"
+    degree: PhD
+    institution: "National University of Singapore"
+    year_start: 2025
+    year_end: 2027
+    expected: true
+    coadvisor: "Bibhas Chakraborty"
+    thesis_title: null
+    current_position: null
+
+  - name: "Cai Yuchao"
+    degree: Postdoc
+    institution: "National University of Singapore"
+    year_start: 2024
+    year_end: 2026
+    expected: true
+    coadvisor: null
+    thesis_title: null
+    current_position: null
+
+  - name: "Deng Ruizhe"
+    degree: PhD
+    institution: "National University of Singapore"
+    year_start: 2023
+    year_end: 2027
+    expected: true
+    coadvisor: "Bibhas Chakraborty"
+    thesis_title: null
+    current_position: null
+
+  - name: "Zhuang Tianyi"
+    degree: PhD
+    institution: "National University of Singapore"
+    year_start: 2023
+    year_end: 2027
+    expected: true
+    coadvisor: null
+    thesis_title: null
+    current_position: null
+
+  - name: "Xu Zineng"
+    degree: PhD
+    institution: "National University of Singapore"
+    year_start: 2023
+    year_end: 2026
+    expected: true
+    coadvisor: null
+    thesis_title: null
+    current_position: null
+
+  - name: "Zeng Zitong"
+    degree: MSc
+    institution: "National University of Singapore"
+    year_start: 2023
+    year_end: 2024
+    expected: false
+    coadvisor: null
+    thesis_title: null
+    current_position: null
+
+  - name: "Wang Yihe"
+    degree: BS
+    institution: "National University of Singapore"
+    year_start: 2025
+    year_end: 2025
+    expected: false
+    coadvisor: null
+    thesis_title: null
+    current_position: null
+
+  - name: "Song Yida"
+    degree: BS
+    institution: "National University of Singapore"
+    year_start: 2023
+    year_end: 2024
+    expected: false
+    coadvisor: null
+    thesis_title: null
+    current_position: null
+
+thesis_advisory_committee:
+  - name: "Wenshan Qu"
+    institution: "National University of Singapore"
+    year_start: 2024
+    year_end: 2027
+    expected: true
+
+  - name: "Nicolas Alexander Ihlo"
+    institution: "University of Regensburg"
+    year_start: 2025
+    year_end: 2027
+    expected: true
+
+mentoring:
+  - title: "BAIR Undergraduate Mentoring Program"
+    organization: "University of California, Berkeley"
+    year_start: 2020
+    year_end: 2020
+
+  - title: "Mentoring junior PhD students in Yu Group"
+    organization: "University of California, Berkeley"
+    year_start: 2019
+    year_end: 2022

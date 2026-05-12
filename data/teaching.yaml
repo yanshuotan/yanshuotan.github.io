@@ -1,0 +1,101 @@
+# teaching.yaml
+teaching:
+  - course_code: "ST5209/X"
+    title: "Analysis of Time Series Data"
+    institution: "National University of Singapore"
+    role: "Instructor"
+    level: "Masters"
+    semesters: ["Semester II 2023", "Semester II 2024", "Semester II 2025", "Semester II 2026"]
+    enrollment: null
+    description: null
+    notes: null
+
+  - course_code: "ST5201X"
+    title: "Statistical Foundations of Data Science"
+    institution: "National University of Singapore"
+    role: "Instructor"
+    level: "Masters"
+    semesters: ["Semester I 2022"]
+    enrollment: null
+    description: null
+    notes: null
+
+  - course_code: "Data 102"
+    title: "Data, Inference, and Decisions"
+    institution: "University of California, Berkeley"
+    role: "Instructor"
+    level: "Undergraduate"
+    semesters: ["Spring 2021"]
+    enrollment: 250
+    description: >
+      Capstone course for the data science major. Develops the probabilistic
+      foundations of inference in data science and builds a comprehensive view
+      of the modeling and decision-making life cycle. Topics include:
+      frequentist and Bayesian decision-making, false discovery rate, causal
+      inference, general linear modeling, non-parametric modeling, bandits,
+      and reinforcement learning.
+    notes: null
+
+  - course_code: "Stat 210B"
+    title: "Theoretical Statistics II"
+    institution: "University of California, Berkeley"
+    role: "Instructor"
+    level: "PhD"
+    semesters: ["Spring 2020"]
+    enrollment: null
+    description: >
+      Second course on theoretical statistics for PhD students, focusing on
+      high-dimensional statistics.
+    notes: null
+
+  - course_code: null
+    title: "Precalculus"
+    institution: "University of Michigan"
+    role: "Instructor of Record"
+    level: "Undergraduate"
+    semesters: ["Fall 2013 – Winter 2018 (1 semester)"]
+    enrollment: 20
+    notes: "Section of 20–25 students; responsible for lecturing, group work, materials, and grading."
+
+  - course_code: null
+    title: "Calculus I"
+    institution: "University of Michigan"
+    role: "Instructor of Record"
+    level: "Undergraduate"
+    semesters: ["Fall 2013 – Winter 2018 (3 semesters)"]
+    enrollment: 20
+    notes: "Section of 20–25 students; responsible for lecturing, group work, materials, and grading."
+
+  - course_code: null
+    title: "Calculus II"
+    institution: "University of Michigan"
+    role: "Instructor of Record"
+    level: "Undergraduate"
+    semesters: ["Fall 2013 – Winter 2018 (2 semesters)"]
+    enrollment: 20
+    notes: "Section of 20–25 students; responsible for lecturing, group work, materials, and grading."
+
+  - course_code: null
+    title: "Multivariate Calculus"
+    institution: "University of Michigan"
+    role: "Teaching Assistant"
+    level: "Undergraduate"
+    semesters: ["Fall 2013 – Winter 2018 (1 semester)"]
+    notes: "Led lab tutorial sessions and graded."
+
+  - course_code: null
+    title: "Differential Equations"
+    institution: "University of Michigan"
+    role: "Teaching Assistant"
+    level: "Undergraduate"
+    semesters: ["Fall 2013 – Winter 2018 (1 semester)"]
+    notes: "Led lab tutorial sessions and graded."
+
+  - course_code: null
+    title: "Precalculus (Course Co-coordinator)"
+    institution: "University of Michigan"
+    role: "Course Co-coordinator"
+    level: "Undergraduate"
+    semesters: ["Fall 2013 – Winter 2018 (1 semester)"]
+    enrollment: 500
+    notes: "Co-coordinated a course of ~500 students. Trained and supervised new instructors; wrote homework and exams."
