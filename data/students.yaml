@@ -17,7 +17,7 @@ students:
     year_end: 2026
     expected: true
     coadvisor: null
-    notes: "Visiting student"
+    notes: "visiting from RUC"
     thesis_title: null
     current_position: null
 

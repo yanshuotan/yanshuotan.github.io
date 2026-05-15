@@ -219,7 +219,8 @@ $\corr$~corresponding author)}
 \begin{itemize}\itemsep0em
 <% for s in students.students %>
 \item << s.name | esc >> (<< s.degree >>)%
-<% if s.coadvisor %>, \textit{co-advised with << s.coadvisor | esc >>}<% endif %>
+<% if s.coadvisor %>, \textit{co-advised with << s.coadvisor | esc >>}<% endif %>%
+<% if s.notes %>, \textit{<< s.notes | esc >>}<% endif %>
 \hfill{\emph{<< s.year_start >>--<< s.year_end >><% if s.expected %> (expected)<% endif %>}}
 <% endfor %>
 \end{itemize}

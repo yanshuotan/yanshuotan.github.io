@@ -16,7 +16,7 @@ permalink: /students/
 <li class="student-item">
   <div>
     <span class="student-name">{{ s.name }}</span>
-    <span class="student-degree">&nbsp;({{ s.degree }}{% if s.coadvisor %}, co-advised with {{ s.coadvisor }}{% endif %})</span>
+    <span class="student-degree">&nbsp;({{ s.degree }}{% if s.coadvisor %}, co-advised with {{ s.coadvisor }}{% endif %}{% if s.notes %}, <em>{{ s.notes }}</em>{% endif %})</span>
   </div>
   <span class="student-years">{{ s.year_start }}–{{ s.year_end }} (expected)</span>
 </li>
@@ -30,7 +30,7 @@ permalink: /students/
 <li class="student-item">
   <div>
     <span class="student-name">{{ s.name }}</span>
-    <span class="student-degree">&nbsp;({{ s.degree }}{% if s.coadvisor %}, co-advised with {{ s.coadvisor }}{% endif %})</span>
+    <span class="student-degree">&nbsp;({{ s.degree }}{% if s.coadvisor %}, co-advised with {{ s.coadvisor }}{% endif %}{% if s.notes %}, <em>{{ s.notes }}</em>{% endif %})</span>
   </div>
   <span class="student-years">{{ s.year_start }}–{{ s.year_end }}</span>
 </li>
