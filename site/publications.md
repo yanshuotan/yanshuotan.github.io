@@ -8,7 +8,8 @@ permalink: /publications/
 
 <p class="pub-footnote">
   <sup>*</sup> Equal contribution or alphabetical ordering &nbsp;|&nbsp;
-  <sup>†</sup> Student or postdoc supervised
+  <sup>†</sup> Student or postdoc supervised &nbsp;|&nbsp;
+  <sup>‡</sup> Corresponding author
 </p>
 
 <h2 class="section-heading">Journal Publications</h2>

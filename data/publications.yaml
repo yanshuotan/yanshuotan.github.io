@@ -67,7 +67,6 @@ publications:
       - name: "Loganathan, Sumetha"
         supervised: true
       - name: "Zhang, Qiong"
-        supervised: true
       - name: "Chakraborty, Bibhas"
     year: 2026
     type: preprint
@@ -99,11 +98,9 @@ publications:
     title: "TabClustPFN: A Prior-Fitted Network for Tabular Data Clustering"
     authors:
       - name: "Zhao, Tianqi"
-        supervised: true
       - name: "Wang, Guanyang"
       - name: "Tan, Yan Shuo"
       - name: "Zhang, Qiong"
-        supervised: true
     year: 2026
     type: preprint
     status: preprint
@@ -202,7 +199,6 @@ publications:
       - name: "Huang, Gexin"
       - name: "Shen, Xinwei"
       - name: "Zhang, Qiong"
-        supervised: true
       - name: "Tan, Yan Shuo"
       - name: "Li, Xiaoxiao"
     year: 2025
@@ -218,7 +214,6 @@ publications:
     title: "TabPFN: One Model to Rule Them All?"
     authors:
       - name: "Zhang, Qiong"
-        supervised: true
         equal: true
       - name: "Tan, Yan Shuo"
         equal: true
@@ -238,7 +233,6 @@ publications:
     title: "Revisiting Randomization in Greedy Model Search"
     authors:
       - name: "Chen, Xin"
-        supervised: true
         equal: true
       - name: "Klusowski, Jason M"
         equal: true
@@ -291,7 +285,6 @@ publications:
     title: "Byzantine-Tolerant Distributed Learning of Finite Mixture Models"
     authors:
       - name: "Zhang, Qiong"
-        supervised: true
         equal: true
       - name: "Tan, Yan Shuo"
         equal: true
@@ -364,7 +357,6 @@ publications:
     title: "Error Reduction from Stacked Regressions"
     authors:
       - name: "Chen, Xin"
-        supervised: true
         equal: true
       - name: "Klusowski, Jason M"
         equal: true
