@@ -295,7 +295,7 @@ publications:
     venue: "Journal of the Royal Statistical Society, Series B"
     venue_short: "JRSS-B"
     arxiv: "2407.13980"
-    url: "https://arxiv.org/abs/2407.13980"
+    url: "https://academic.oup.com/jrsssb/advance-article/doi/10.1093/jrsssb/qkag065/8656099"
 
   # ── 2023 ────────────────────────────────────────────────────────────────────
 
@@ -312,25 +312,8 @@ publications:
     volume: 24
     number: 58
     pages: "1--47"
-    url: "https://arxiv.org/abs/1910.12837"
-
-  - key: lipor2023erratum
-    title: "Erratum to: Subspace Clustering Using Ensembles of K-Subspaces"
-    authors:
-      - name: "Lipor, John"
-      - name: "Hong, David"
-      - name: "Tan, Yan Shuo"
-      - name: "Balzano, Laura"
-    year: 2023
-    type: journal
-    status: published
-    venue: "Information and Inference: A Journal of the IMA"
-    venue_short: "Information and Inference"
-    volume: 12
-    number: 1
-    pages: "590--590"
-    publisher: "Oxford University Press"
-    notes: "Erratum"
+    arxiv: "1910.12837"
+    url: "https://jmlr.org/papers/v24/20-902.html"
 
   - key: agarwal2023mdi
     title: "Integrating Random Forests and Generalized Linear Models for Improved Accuracy and Interpretability"
