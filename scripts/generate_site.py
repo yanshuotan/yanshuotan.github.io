@@ -207,7 +207,7 @@ def main():
     print("Generating site/_data/ …")
 
     # Pass-through files (minimal processing)
-    for fname in ("profile.yaml", "misc.yaml"):
+    for fname in ("profile.yaml", "misc.yaml", "photos.yaml"):
         dump(load(fname), SITE_DATA / fname)
 
     # Students — pass through

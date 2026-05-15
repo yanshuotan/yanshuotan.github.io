@@ -16,6 +16,7 @@ nav_pages:
   - { title: "Students",     url: "/students/"     }
   - { title: "Teaching",     url: "/teaching/"     }
   - { title: "Service",      url: "/service/"      }
+  - { title: "Photos",       url: "/photos/"       }
 
 # CV link
 cv_url: "/assets/cv.pdf"   # place a compiled cv.pdf here

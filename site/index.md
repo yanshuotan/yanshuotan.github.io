@@ -5,8 +5,7 @@ permalink: /
 ---
 
 <div class="profile">
-  <!-- Replace with your photo: place photo.jpg in assets/ -->
-  <!-- <img class="profile-photo" src="{{ '/assets/photo.jpg' | relative_url }}" alt="{{ site.data.profile.name }}"> -->
+  <img class="profile-photo" src="{{ '/assets/images/profile/profile.jpg' | relative_url }}" alt="{{ site.data.profile.name }}">
   <div class="profile-info">
     <h1>{{ site.data.profile.name }}</h1>
     <p class="affiliation">{{ site.data.profile.department }}<br>{{ site.data.profile.institution }}</p>

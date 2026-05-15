@@ -1,0 +1,14 @@
+# photos.yaml
+# Each entry is one photo displayed on the Photos page.
+# Fields:
+#   file     (string)        -- path relative to site/assets/images/, e.g. "talks/riken_2024.jpg"
+#   caption  (string)        -- short description shown below the photo
+#   event    (string, opt)   -- event name (links entry to a talk or conference)
+#   year     (int)           -- used for grouping and sorting
+#   month    (int, optional) -- month of photo (1-12)
+#
+# Image guidelines:
+#   - Place files in site/assets/images/ (subdirs: talks/, profile/, misc/)
+#   - Compress to < 300 KB before committing (e.g. using https://squoosh.app)
+#   - Prefer landscape or square crops; 4:3 ratio works best in the grid
+photos: []

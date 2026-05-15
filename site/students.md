@@ -9,6 +9,11 @@ permalink: /students/
 {% assign current = site.data.students.students | where_exp: "s", "s.expected == true" %}
 {% assign graduated = site.data.students.students | where_exp: "s", "s.expected != true" %}
 
+<div class="group-photo-wrap">
+  <img class="group-photo" src="{{ '/assets/images/students.jpeg' | relative_url }}" alt="Group photo">
+  <p class="group-photo-caption">With my students, April 2026</p>
+</div>
+
 <h2 class="section-heading">Current</h2>
 
 <ul class="student-list">
