@@ -149,7 +149,7 @@ publications:
     venue: "International Conference on Machine Learning"
     venue_short: "ICML"
     arxiv: "2602.07767"
-    url: "https://arxiv.org/abs/2602.07767"
+    url: "https://icml.cc/virtual/2026/poster/63217"
     awards:
       - "Spotlight"
 
@@ -190,7 +190,8 @@ publications:
     status: published
     venue: "Advances in Neural Information Processing Systems"
     venue_short: "NeurIPS"
-    url: "https://arxiv.org/abs/2410.15555"
+    url: "https://neurips.cc/virtual/2025/loc/san-diego/poster/116029"
+    arxiv: "2410.15555"
 
   - key: jin2025see
     title: "See-in-Pairs: Reference Image-Guided Comparative Vision-Language Models for Medical Diagnosis"
@@ -373,9 +374,10 @@ publications:
     venue_short: "ICML"
     pages: "111--135"
     publisher: "PMLR"
-    url: "https://arxiv.org/abs/2202.00858"
+    url: "https://proceedings.mlr.press/v162/agarwal22b.html"
+    arxiv: "2202.00858"
     awards:
-      - "Long presentation"
+      - "Oral"
 
   - key: tan2022cautionary
     title: "A Cautionary Tale on Fitting Decision Trees to Data from Additive Models: Generalization Lower Bounds"
@@ -390,7 +392,8 @@ publications:
     venue_short: "AISTATS"
     pages: "9663--9685"
     publisher: "PMLR"
-    url: "https://arxiv.org/abs/2110.09626"
+    url: "https://proceedings.mlr.press/v151/shuo-tan22a.html"
+    arxiv: "2110.09626"
 
   - key: ronen2022mixing
     title: "A Mixing Time Lower Bound for a Simplified Version of BART"
@@ -509,7 +512,8 @@ publications:
     venue_short: "ISR"
     volume: 88
     pages: "S135--S178"
-    url: "https://arxiv.org/abs/2008.10109"
+    url: "https://onlinelibrary.wiley.com/doi/abs/10.1111/insr.12427"
+    arxiv: "2008.10109"
     notes: "Invited for a special issue"
 
   # ── 2019 ────────────────────────────────────────────────────────────────────
