@@ -183,12 +183,33 @@ $\corr$~corresponding author)}
     <% endif %>}\vspace*{-.05in}
     \begin{itemize}\itemsep0em
     <% for inst in talk.instances %>
-    \item << inst.venue | esc >>, << inst.location | esc >>
+    \item << inst.venue | esc >>, << inst.location | esc >><% if inst.recording %> [\href{<< inst.recording >>}{video}]<% endif %>\hfill\emph{<< inst.year >>}
     <% endfor %>
     \end{itemize}
 
 <% endfor %>
 \end{enumerate}
+
+% ── Poster Presentations ─────────────────────────────────────────────────────
+<% if posters %>
+\section{\sc Poster \\ Presentations}
+
+\begin{enumerate}[label=(\arabic*)]\itemsep0.4em
+<% for poster in posters %>
+  \item << poster.title | esc >>
+    \hfill{%
+    <% if poster.year_range[0] == poster.year_range[1] %>\emph{<< poster.year_range[0] >>}%
+    <% else %>\emph{<< poster.year_range[0] >>--<< poster.year_range[1] >>}%
+    <% endif %>}\vspace*{-.05in}
+    \begin{itemize}\itemsep0em
+    <% for inst in poster.instances %>
+    \item << inst.venue | esc >>, << inst.location | esc >>\hfill\emph{<< inst.year >>}
+    <% endfor %>
+    \end{itemize}
+
+<% endfor %>
+\end{enumerate}
+<% endif %>
 
 % ── Teaching Experience ───────────────────────────────────────────────────────
 \section{\sc Teaching \\ Experience}

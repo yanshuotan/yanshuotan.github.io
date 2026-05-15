@@ -238,9 +238,15 @@ def main():
     misc     = load("misc.yaml")
     pubs_raw = load("publications.yaml")["publications"]
     talks    = load("talks.yaml")["talks"]
+    posters  = load("posters.yaml")["posters"]
     students = load("students.yaml")
     teaching = load("teaching.yaml")["teaching"]
     service  = load("service.yaml")
+
+    # Compute year_range for each talk/poster dynamically from instance years
+    for talk in talks + posters:
+        years = [inst["year"] for inst in talk.get("instances", []) if inst.get("year")]
+        talk["year_range"] = [min(years), max(years)] if years else [0, 0]
 
     # Process publications
     journals, confs, preprints, inprep = split_pubs(pubs_raw)
@@ -267,6 +273,7 @@ def main():
         preprints     = preprints,
         inprep_pubs   = inprep,
         talks         = talks,
+        posters       = posters,
         students      = students,
         teaching      = teaching,
         service       = service,

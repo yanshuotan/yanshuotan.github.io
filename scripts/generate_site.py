@@ -175,14 +175,31 @@ def split_and_enrich(all_pubs):
 
 # ── Talk processing ───────────────────────────────────────────────────────────
 
+_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+def fmt_date(year, month=None):
+    """Return 'Mon YYYY' if month given, else 'YYYY'."""
+    if month:
+        return f"{_MONTHS[int(month) - 1]} {year}"
+    return str(year)
+
 def enrich_talk(talk):
     t = dict(talk)
-    t["year_display"] = (
-        str(talk["year_range"][0])
-        if talk["year_range"][0] == talk["year_range"][1]
-        else f"{talk['year_range'][0]}–{talk['year_range'][1]}"
-    )
+    years = [inst["year"] for inst in talk.get("instances", []) if inst.get("year")]
+    t["year_range"] = [min(years), max(years)] if years else [0, 0]
+    # Add date_display to each instance
+    instances = []
+    for inst in talk.get("instances", []):
+        i = dict(inst)
+        i["date_display"] = fmt_date(inst.get("year", ""), inst.get("month"))
+        instances.append(i)
+    t["instances"] = instances
     return t
+
+def enrich_poster(poster):
+    """Same enrichment as talks."""
+    return enrich_talk(poster)
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
@@ -205,6 +222,10 @@ def main():
     # Talks — add display fields
     talks_raw = load("talks.yaml")["talks"]
     dump({"talks": [enrich_talk(t) for t in talks_raw]}, SITE_DATA / "talks.yaml")
+
+    # Posters — same enrichment as talks
+    posters_raw = load("posters.yaml")["posters"]
+    dump({"posters": [enrich_poster(p) for p in posters_raw]}, SITE_DATA / "posters.yaml")
 
     # Publications — split into three lists with HTML formatting
     all_pubs = load("publications.yaml")["publications"]

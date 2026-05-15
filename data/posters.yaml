@@ -1,0 +1,30 @@
+# posters.yaml
+# Schema mirrors talks.yaml.
+# Each entry is a poster title that may have been presented at one or more venues.
+# Top-level fields:
+#   title         (string)       -- poster title
+#   related_paper (string, opt)  -- key in publications.yaml
+# Fields per instance:
+#   venue    (string)            -- conference or event name
+#   type     (string)            -- e.g. conference, workshop
+#   location (string)            -- city, country
+#   year     (int)               -- year of presentation
+#   month    (int, optional)     -- month of presentation (1-12)
+posters:
+  - title: "Revisiting Randomization in Greedy Model Search"
+    related_paper: null
+    instances:
+      - venue: "JSM"
+        type: conference
+        location: "Nashville, USA"
+        year: 2025
+        month: 8
+
+  - title: "Bayesian Concept Bottleneck Models with LLM Priors"
+    related_paper: null
+    instances:
+      - venue: "XAI4Science: From Understanding Model Behavior to Discovering New Scientific Knowledge"
+        type: workshop
+        location: "Singapore"
+        year: 2025
+        month: 4

@@ -176,6 +176,8 @@ publications:
     number: 7
     pages: "e2310151122"
     publisher: "National Academy of Sciences"
+    url: "https://www.pnas.org/doi/10.1073/pnas.2310151122"
+    arxiv: "2201.11931"
 
   - key: feng2025bayesian
     title: "Bayesian Concept Bottleneck Models with LLM Priors"
