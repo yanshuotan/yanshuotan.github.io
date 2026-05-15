@@ -111,12 +111,15 @@ def fmt_venue_html(pub):
         return suffix if suffix else "<em>to appear</em>"
 
     if review == "RR":
-        return "<em>in revision</em>"
-    if review in ("under_review", "minor_revision", "major_revision"):
-        target = notes.replace("Submitted to ", "").strip()
+        target = notes.replace("R&R at ", "").strip()
         if target:
-            return f"submitted to <em>{html_escape(target)}</em>"
-        return "<em>under review</em>"
+            return f"<em>in revision</em> at <em>{html_escape(target)}</em>"
+        return "<em>in revision</em>"
+    if review == "major_revision":
+        target = notes.replace("Major revision at ", "").strip()
+        if target:
+            return f"<em>major revision</em> at <em>{html_escape(target)}</em>"
+        return "<em>major revision</em>"
 
     return f"arXiv preprint, {year}" if year else "arXiv preprint"
 

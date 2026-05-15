@@ -141,12 +141,9 @@ def fmt_venue(pub):
         if target:
             return f"major revision at \\textit{{{esc(target)}}}"
         return "major revision"
+    # under_review / minor_revision: show no label, just year
     if review in ("under_review", "minor_revision"):
-        # Extract target journal from notes
-        target = notes.replace("Submitted to ", "").strip()
-        if target:
-            return f"submitted to \\textit{{{esc(target)}}}"
-        return "under review"
+        pass
 
     # In-preparation (no venue)
     if pub.get("type") == "inprep":

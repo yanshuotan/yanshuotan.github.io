@@ -37,24 +37,10 @@
 
 publications:
 
-  # ── In Preparation ──────────────────────────────────────────────────────────
+  # ── 2026 ────────────────────────────────────────────────────────────────────
 
-  - key: xu2025early
-    title: "On Early Stopping and Ideal Spatial Adaptation for CART"
-    authors:
-      - name: "Xu, Zineng"
-        supervised: true
-      - name: "Cai, Yuchao"
-        supervised: true
-      - name: "Tan, Yan Shuo"
-        corresponding: true
-    year: null
-    type: inprep
-    status: preprint
-    review_status: null
-
-  - key: singh2025agentic
-    title: "AGENTIC-IMODELS: Evolving Interpretability Tools for Agents"
+  - key: singh2026agentic
+    title: "Agentic-imodels: Evolving Agentic Interpretability Tools via Autoresearch"
     authors:
       - name: "Singh, Chandan"
       - name: "Tan, Yan Shuo"
@@ -63,45 +49,33 @@ publications:
       - name: "Yang, Weiwei"
       - name: "Galley, Michel"
       - name: "Gao, Jianfeng"
-    year: null
-    type: inprep
+    year: 2026
+    type: preprint
     status: preprint
     review_status: null
+    venue: "arXiv preprint"
+    arxiv: "2605.03808"
+    url: "https://arxiv.org/abs/2605.03808"
 
-  - key: deng2025contextual
-    title: "Solving Contextual Bandits via Efficient Online Uncertainty Quantification with Tabular Foundation Models"
+  - key: tan2026pfn
+    title: "PFN-TS: Thompson Sampling for Contextual Bandits via Prior-Data Fitted Networks"
     authors:
+      - name: "Tan, Yan Shuo"
+      - name: "Ng, Kenyon"
       - name: "Deng, Ruizhe"
         supervised: true
       - name: "Loganathan, Sumetha"
         supervised: true
-      - name: "Ng, Kenyon"
+      - name: "Zhang, Qiong"
+        supervised: true
       - name: "Chakraborty, Bibhas"
-      - name: "Zhang, Qiong"
-        supervised: true
-      - name: "Tan, Yan Shuo"
-        corresponding: true
-    year: null
-    type: inprep
+    year: 2026
+    type: preprint
     status: preprint
     review_status: null
-
-  - key: zhao2025uncertainty
-    title: "Uncertainty Evaluation and Calibration for Tabular Foundation Models"
-    authors:
-      - name: "Zhao, Tianqi"
-        supervised: true
-      - name: "Zhang, Qiong"
-        supervised: true
-        equal: true
-      - name: "Tan, Yan Shuo"
-        equal: true
-    year: null
-    type: inprep
-    status: preprint
-    review_status: null
-
-  # ── 2026 ────────────────────────────────────────────────────────────────────
+    venue: "arXiv preprint"
+    arxiv: "2605.10137"
+    url: "https://arxiv.org/abs/2605.10137"
 
   - key: xu2026statistical
     title: "On the Statistical Optimality of Optimal Decision Trees"
@@ -347,6 +321,24 @@ publications:
     pages: "1--47"
     url: "https://arxiv.org/abs/1910.12837"
 
+  - key: lipor2023erratum
+    title: "Erratum to: Subspace Clustering Using Ensembles of K-Subspaces"
+    authors:
+      - name: "Lipor, John"
+      - name: "Hong, David"
+      - name: "Tan, Yan Shuo"
+      - name: "Balzano, Laura"
+    year: 2023
+    type: journal
+    status: published
+    venue: "Information and Inference: A Journal of the IMA"
+    venue_short: "Information and Inference"
+    volume: 12
+    number: 1
+    pages: "590--590"
+    publisher: "Oxford University Press"
+    notes: "Erratum"
+
   - key: agarwal2023mdi
     title: "Integrating Random Forests and Generalized Linear Models for Improved Accuracy and Interpretability"
     authors:
@@ -386,24 +378,6 @@ publications:
     arxiv: "2309.09880"
     url: "https://arxiv.org/abs/2309.09880"
     notes: "Submitted to Journal of the American Statistical Association"
-
-  - key: lipor2023erratum
-    title: "Erratum to: Subspace Clustering Using Ensembles of K-Subspaces"
-    authors:
-      - name: "Lipor, John"
-      - name: "Hong, David"
-      - name: "Tan, Yan Shuo"
-      - name: "Balzano, Laura"
-    year: 2023
-    type: journal
-    status: published
-    venue: "Information and Inference: A Journal of the IMA"
-    venue_short: "Information and Inference"
-    volume: 12
-    number: 1
-    pages: "590--590"
-    publisher: "Oxford University Press"
-    notes: "Erratum"
 
   # ── 2022 ────────────────────────────────────────────────────────────────────
 

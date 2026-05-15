@@ -64,7 +64,6 @@ permalink: /publications/
     </div>
     <div class="pub-authors">{{ pub.author_html }}</div>
     <div class="pub-venue">{{ pub.venue_html }}</div>
-    {% if pub.notes %}<div class="pub-note">{{ pub.notes }}</div>{% endif %}
   </div>
 </li>
 {% endfor %}
