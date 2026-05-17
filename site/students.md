@@ -42,18 +42,3 @@ permalink: /students/
 {% endfor %}
 </ul>
 {% endif %}
-
-{% if site.data.students.mentoring %}
-<h2 class="section-heading">Other Mentoring</h2>
-<ul class="student-list">
-{% for m in site.data.students.mentoring %}
-<li class="student-item">
-  <div>
-    <span class="student-name">{{ m.title }}</span>
-    <span class="student-degree">&nbsp;— {{ m.organization }}</span>
-  </div>
-  <span class="student-years">{{ m.year_start }}{% if m.year_end %}–{{ m.year_end }}{% endif %}</span>
-</li>
-{% endfor %}
-</ul>
-{% endif %}

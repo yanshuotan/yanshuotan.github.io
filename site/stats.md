@@ -44,34 +44,12 @@ Number of joint papers with each co-author, sorted by count.
     <tr><th>Name</th><th>Papers</th></tr>
   </thead>
   <tbody>
-  {% for c in site.data.stats.collaborators %}
+  {% for c in site.data.stats.collaborators %}{% if c.papers > 1 %}
     <tr>
       <td>{{ c.name }}</td>
       <td>{{ c.papers }}</td>
     </tr>
-  {% endfor %}
+  {% endif %}{% endfor %}
   </tbody>
 </table>
 
----
-
-## Reviewing
-
-{{ site.data.stats.reviewing.total }} papers reviewed in total:
-{{ site.data.stats.reviewing.journal }} for journals and
-{{ site.data.stats.reviewing.conference }} for conferences.
-
-<table class="stats-table">
-  <thead>
-    <tr><th>Venue</th><th>Type</th><th>Years</th></tr>
-  </thead>
-  <tbody>
-  {% for r in site.data.service.reviewing %}
-    <tr>
-      <td>{% if r.venue_short %}{{ r.venue_short }}{% else %}{{ r.venue }}{% endif %}</td>
-      <td>{{ r.type | capitalize }}</td>
-      <td>{{ r.years | join: ", " }}</td>
-    </tr>
-  {% endfor %}
-  </tbody>
-</table>
