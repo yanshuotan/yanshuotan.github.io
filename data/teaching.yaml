@@ -84,7 +84,7 @@ teaching:
     institution: "University of Michigan"
     role: "Instructor of Record"
     level: "Undergraduate"
-    semesters: ["Winter 2014, Winter 2015"]
+    semesters: ["Winter 2014", "Winter 2015"]
     semester_links:
       "Winter 2014": "https://courses.lsa.umich.edu/math-116/"
       "Winter 2015": "https://courses.lsa.umich.edu/math-116/"

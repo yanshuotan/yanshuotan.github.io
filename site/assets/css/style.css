@@ -247,6 +247,39 @@ h2.section-heading {
   font-style: italic;
 }
 
+/* ── Topic filters ───────────────────────────────────────────────────────────  */
+.topic-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 1rem 0 1.5rem;
+}
+.topic-filter-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-right: 0.25rem;
+}
+.topic-btn {
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--muted);
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.topic-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.topic-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
 /* ── Stats page ─────────────────────────────────────────────────────────────  */
 .stats-grid {
   display: grid;

@@ -40,6 +40,7 @@ publications:
   # ── 2026 ────────────────────────────────────────────────────────────────────
 
   - key: singh2026agentic
+    topics: ["interpretability"]
     title: "Agentic-imodels: Evolving Agentic Interpretability Tools via Autoresearch"
     authors:
       - name: "Singh, Chandan"
@@ -58,6 +59,7 @@ publications:
     url: "https://arxiv.org/abs/2605.03808"
 
   - key: tan2026pfn
+    topics: ["prior-data fitted networks"]
     title: "PFN-TS: Thompson Sampling for Contextual Bandits via Prior-Data Fitted Networks"
     authors:
       - name: "Tan, Yan Shuo"
@@ -77,6 +79,7 @@ publications:
     url: "https://arxiv.org/abs/2605.10137"
 
   - key: xu2026statistical
+    topics: ["trees", "theory"]
     title: "On the Statistical Optimality of Optimal Decision Trees"
     authors:
       - name: "Xu, Zineng"
@@ -95,6 +98,7 @@ publications:
     notes: "Submitted to Annals of Statistics"
 
   - key: zhao2026tabclustpfn
+    topics: ["prior-data fitted networks"]
     title: "TabClustPFN: A Prior-Fitted Network for Tabular Data Clustering"
     authors:
       - name: "Zhao, Tianqi"
@@ -111,6 +115,7 @@ publications:
     notes: "Submitted to ICML"
 
   - key: feng2026human
+    topics: ["interpretability"]
     title: "Human-AI Co-design for Clinical Prediction Models"
     authors:
       - name: "Feng, Jean"
@@ -132,6 +137,7 @@ publications:
     notes: "Major revision at Nature Digital Medicine"
 
   - key: deng2026bfts
+    topics: ["BART", "Bayesian", "trees"]
     title: "BFTS: Thompson Sampling with Bayesian Additive Regression Trees"
     authors:
       - name: "Deng, Ruizhe"
@@ -156,6 +162,7 @@ publications:
   # ── 2025 ────────────────────────────────────────────────────────────────────
 
   - key: tan2025fast
+    topics: ["trees", "ensembles", "interpretability"]
     title: "Fast Interpretable Greedy-Tree Sums"
     authors:
       - name: "Tan, Yan Shuo"
@@ -184,6 +191,7 @@ publications:
     arxiv: "2201.11931"
 
   - key: feng2025bayesian
+    topics: ["Bayesian", "interpretability"]
     title: "Bayesian Concept Bottleneck Models with LLM Priors"
     authors:
       - name: "Feng, Jean"
@@ -218,6 +226,7 @@ publications:
     notes: "Submitted to Medical Image Analysis"
 
   - key: zhang2025tabpfn
+    topics: ["prior-data fitted networks"]
     title: "TabPFN: One Model to Rule Them All?"
     authors:
       - name: "Zhang, Qiong"
@@ -237,6 +246,7 @@ publications:
     notes: "Major revision at Journal of the American Statistical Association"
 
   - key: chen2025revisiting
+    topics: ["trees", "ensembles", "theory"]
     title: "Revisiting Randomization in Greedy Model Search"
     authors:
       - name: "Chen, Xin"
@@ -259,6 +269,7 @@ publications:
   # ── 2024 ────────────────────────────────────────────────────────────────────
 
   - key: tan2024statistical
+    topics: ["trees", "theory"]
     title: "Statistical-Computational Trade-offs for Recursive Adaptive Partitioning Estimators"
     authors:
       - name: "Tan, Yan Shuo"
@@ -273,6 +284,7 @@ publications:
     url: "https://arxiv.org/abs/2411.04394"
 
   - key: tan2024computational
+    topics: ["BART", "Bayesian", "trees", "theory"]
     title: "The Computational Curse of Big Data for Bayesian Additive Regression Trees: A Hitting Time Analysis"
     authors:
       - name: "Tan, Yan Shuo"
@@ -307,6 +319,7 @@ publications:
   # ── 2023 ────────────────────────────────────────────────────────────────────
 
   - key: tan2023online
+    topics: ["theory"]
     title: "Online Stochastic Gradient Descent with Arbitrary Initialization Solves Non-Smooth, Non-Convex Phase Retrieval"
     authors:
       - name: "Tan, Yan Shuo"
@@ -323,6 +336,7 @@ publications:
     url: "https://jmlr.org/papers/v24/20-902.html"
 
   - key: agarwal2023mdi
+    topics: ["ensembles", "interpretability"]
     title: "Integrating Random Forests and Generalized Linear Models for Improved Accuracy and Interpretability"
     authors:
       - name: "Agarwal, Abhineet"
@@ -344,6 +358,7 @@ publications:
     notes: "R&R at Journal of Machine Learning Research"
 
   - key: chen2023error
+    topics: ["ensembles", "theory"]
     title: "Error Reduction from Stacked Regressions"
     authors:
       - name: "Chen, Xin"
@@ -364,6 +379,7 @@ publications:
   # ── 2022 ────────────────────────────────────────────────────────────────────
 
   - key: agarwal2022hierarchical
+    topics: ["trees", "ensembles", "interpretability"]
     title: "Hierarchical Shrinkage: Improving the Accuracy and Interpretability of Tree-Based Models"
     authors:
       - name: "Agarwal, Abhineet"
@@ -386,6 +402,7 @@ publications:
       - "Oral"
 
   - key: tan2022cautionary
+    topics: ["trees", "theory"]
     title: "A Cautionary Tale on Fitting Decision Trees to Data from Additive Models: Generalization Lower Bounds"
     authors:
       - name: "Tan, Yan Shuo"
@@ -402,6 +419,7 @@ publications:
     arxiv: "2110.09626"
 
   - key: ronen2022mixing
+    topics: ["BART", "Bayesian", "trees", "theory"]
     title: "A Mixing Time Lower Bound for a Simplified Version of BART"
     authors:
       - name: "Ronen, Omer"
@@ -462,6 +480,7 @@ publications:
     notes: "Author list alphabetical"
 
   - key: singh2021imodels
+    topics: ["interpretability"]
     title: "imodels: A Python Package for Fitting Interpretable Models"
     authors:
       - name: "Singh, Chandan"
@@ -480,6 +499,7 @@ publications:
     url: "https://joss.theoj.org/papers/10.21105/joss.03192"
 
   - key: lipor2021subspace
+    topics: ["ensembles"]
     title: "Subspace Clustering Using Ensembles of K-Subspaces"
     authors:
       - name: "Lipor, John"
@@ -500,6 +520,7 @@ publications:
   # ── 2020 ────────────────────────────────────────────────────────────────────
 
   - key: dwivedi2020stable
+    topics: ["interpretability"]
     title: "Stable Discovery of Interpretable Subgroups via Calibration in Causal Studies"
     authors:
       - name: "Dwivedi, Raaz"
@@ -525,6 +546,7 @@ publications:
   # ── 2019 ────────────────────────────────────────────────────────────────────
 
   - key: tan2019phase
+    topics: ["theory"]
     title: "Phase Retrieval via Randomized Kaczmarz: Theoretical Guarantees"
     authors:
       - name: "Tan, Yan Shuo"
@@ -543,6 +565,7 @@ publications:
   # ── 2018 ────────────────────────────────────────────────────────────────────
 
   - key: tan2018polynomial
+    topics: ["theory"]
     title: "Polynomial Time and Sample Complexity for Non-Gaussian Component Analysis: Spectral Methods"
     authors:
       - name: "Tan, Yan Shuo"
@@ -569,6 +592,7 @@ publications:
   # ── 2017 ────────────────────────────────────────────────────────────────────
 
   - key: tan2017energy
+    topics: ["theory"]
     title: "Energy Optimization for Distributions on the Sphere and Improvement to the Welch Bounds"
     authors:
       - name: "Tan, Yan Shuo"
@@ -580,6 +604,7 @@ publications:
     url: "https://projecteuclid.org/euclid.ecp/1502762749"
 
   - key: tan2017sparse
+    topics: ["theory"]
     title: "Sparse Phase Retrieval via Sparse PCA Despite Model Misspecification: A Simplified and Extended Analysis"
     authors:
       - name: "Tan, Yan Shuo"
