@@ -173,6 +173,38 @@ def split_and_enrich(all_pubs):
 
     return journals, confs, preprints
 
+# ── Service processing ───────────────────────────────────────────────────────
+
+def aggregate_reviewing(flat_list):
+    """
+    Convert flat per-paper reviewing entries → grouped per-venue entries.
+    Strips the private 'title' field. Output matches the old years-list schema
+    so templates need no changes.
+    """
+    groups = {}
+    for entry in flat_list:
+        venue = entry["venue"]
+        if venue not in groups:
+            groups[venue] = {
+                "venue":       venue,
+                "venue_short": entry.get("venue_short"),
+                "type":        entry.get("type", "journal"),
+                "years":       [],
+            }
+        year = entry.get("year")
+        if year and year not in groups[venue]["years"]:
+            groups[venue]["years"].append(year)
+    # Sort years within each venue, return in original venue order
+    result = []
+    seen = []
+    for entry in flat_list:
+        venue = entry["venue"]
+        if venue not in seen:
+            seen.append(venue)
+            groups[venue]["years"].sort()
+            result.append(groups[venue])
+    return result
+
 # ── Talk processing ───────────────────────────────────────────────────────────
 
 _MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -216,8 +248,11 @@ def main():
     # Teaching — pass through
     dump(load("teaching.yaml"), SITE_DATA / "teaching.yaml")
 
-    # Service — pass through
-    dump(load("service.yaml"), SITE_DATA / "service.yaml")
+    # Service — aggregate flat reviewing list into per-venue groups
+    service_raw = load("service.yaml")
+    service_out = dict(service_raw)
+    service_out["reviewing"] = aggregate_reviewing(service_raw.get("reviewing", []))
+    dump(service_out, SITE_DATA / "service.yaml")
 
     # Talks — add display fields
     talks_raw = load("talks.yaml")["talks"]

@@ -207,6 +207,37 @@ def split_pubs(all_pubs):
     return journals, confs, preprints, inprep
 
 
+# ── Service helpers ───────────────────────────────────────────────────────────
+
+def aggregate_reviewing(flat_list):
+    """
+    Convert flat per-paper reviewing entries → grouped per-venue entries.
+    Strips the private 'title' field. Output matches the old years-list schema
+    so the CV template needs no changes.
+    """
+    groups = {}
+    for entry in flat_list:
+        venue = entry["venue"]
+        if venue not in groups:
+            groups[venue] = {
+                "venue":       venue,
+                "venue_short": entry.get("venue_short"),
+                "type":        entry.get("type", "journal"),
+                "years":       [],
+            }
+        year = entry.get("year")
+        if year and year not in groups[venue]["years"]:
+            groups[venue]["years"].append(year)
+    seen = []
+    result = []
+    for entry in flat_list:
+        venue = entry["venue"]
+        if venue not in seen:
+            seen.append(venue)
+            groups[venue]["years"].sort()
+            result.append(groups[venue])
+    return result
+
 # ── Jinja2 environment ────────────────────────────────────────────────────────
 
 def make_env():
@@ -241,7 +272,9 @@ def main():
     posters  = load("posters.yaml")["posters"]
     students = load("students.yaml")
     teaching = load("teaching.yaml")["teaching"]
-    service  = load("service.yaml")
+    service_raw = load("service.yaml")
+    service = dict(service_raw)
+    service["reviewing"] = aggregate_reviewing(service_raw.get("reviewing", []))
 
     # Compute year_range for each talk/poster dynamically from instance years
     for talk in talks + posters:

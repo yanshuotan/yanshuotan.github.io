@@ -159,9 +159,13 @@ publications:
     title: "Fast Interpretable Greedy-Tree Sums"
     authors:
       - name: "Tan, Yan Shuo"
+        equal: true
       - name: "Singh, Chandan"
+        equal: true
       - name: "Nasseri, Keyan"
+        equal: true
       - name: "Agarwal, Abhineet"
+        equal: true
       - name: "Duncan, James"
       - name: "Ronen, Omer"
       - name: "Epland, Matthew"

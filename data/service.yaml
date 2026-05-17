@@ -1,79 +1,293 @@
 # service.yaml
+
+# ── Reviewing ─────────────────────────────────────────────────────────────────
+# Flat list: one entry per paper reviewed.
+# Fields:
+#   venue       (string)        -- full venue name
+#   venue_short (string, opt)   -- abbreviation used on CV / website
+#   type        (string)        -- "journal" or "conference"
+#   year        (int)           -- review year (journals) or conference year (conferences)
+#   title       (string, opt)   -- paper title (PRIVATE — never published)
+#   authors     (string, opt)   -- author names (PRIVATE — never published)
+#
+# To log a new review, just append an entry. Years are aggregated automatically.
 reviewing:
-  - venue: "Scandinavian Journal of Statistics"
-    type: journal
-    years: [2026]
-  - venue: "Annals of Statistics"
-    venue_short: "AoS"
-    type: journal
-    years: [2025]
-  - venue: "Journal of Machine Learning Research"
-    venue_short: "JMLR"
-    type: journal
-    years: [2025]
-  - venue: "Journal of the American Statistical Association"
-    venue_short: "JASA"
-    type: journal
-    years: [2024, 2025]
-  - venue: "Journal of the Royal Statistical Society: Series B"
-    venue_short: "JRSS-B"
-    type: journal
-    years: [2022, 2024]
-  - venue: "Biometrika"
-    type: journal
-    years: [2024]
-  - venue: "Journal of Data Science"
-    type: journal
-    years: [2024]
-  - venue: "Statistical Methods in Medical Research"
-    type: journal
-    years: [2025]
-  - venue: "Science China"
-    type: journal
-    years: [2025]
-  - venue: "IEEE Transactions on Information Theory"
-    venue_short: "IEEE TIT"
-    type: journal
-    years: [2023, 2026]
-  - venue: "Proceedings of the National Academy of Sciences"
-    venue_short: "PNAS"
-    type: journal
-    years: [2020]
-  - venue: "Annals of Applied Statistics"
-    venue_short: "AoAS"
-    type: journal
-    years: [2020]
-  - venue: "Information and Inference: A Journal of the IMA"
-    venue_short: "Information and Inference"
-    type: journal
-    years: [2019]
+
+  # ── 2017 ──────────────────────────────────────────────────────────────────
+
   - venue: "SMAI Journal of Computational Mathematics"
     type: journal
-    years: [2017]
+    year: 2017
+    title: "Optimal Weighted Least Squares Methods"
+    authors: "Albert Cohen, Giovanni Migliorati"
+
+  # ── 2018 ──────────────────────────────────────────────────────────────────
+
   - venue: "IMA Journal of Numerical Analysis"
     type: journal
-    years: [2017]
-  - venue: "Conference on Neural Information Processing Systems"
-    venue_short: "NeurIPS"
-    type: conference
-    years: [2023, 2025]
-  - venue: "International Conference on Artificial Intelligence and Statistics"
-    venue_short: "AISTATS"
-    type: conference
-    years: [2021, 2024]
-  - venue: "Symposium on Discrete Algorithms"
-    venue_short: "SODA"
-    type: conference
-    years: [2019, 2020]
+    year: 2018
+    title: "The Nonsmooth Landscape of Phase Retrieval"
+    authors: "Damek Davis, Dmitriy Drusvyatskiy, Courtney Paquette"
+
   - venue: "Conference on Learning Theory"
     venue_short: "COLT"
     type: conference
-    years: [2018, 2019]
+    year: 2018
+    title: "The Error Probability of Random Fourier Features is Dimensionality Independent"
+    authors: null
+
+  - venue: "Conference on Learning Theory"
+    venue_short: "COLT"
+    type: conference
+    year: 2018
+    title: "Lifting high-dimensional non-linear models with Gaussian regressors"
+    authors: null
+
   - venue: "Foundations of Computer Science"
     venue_short: "FOCS"
     type: conference
-    years: [2018]
+    year: 2018
+    title: "Non Gaussian Component Analysis using Entropy Methods"
+    authors: "Navin Goyal, Abhishek Shetty"
 
+  - venue: "Symposium on Discrete Algorithms"
+    venue_short: "SODA"
+    type: conference
+    year: 2019
+    title: "Non Gaussian Component Analysis using Entropy Methods"
+    authors: "Navin Goyal, Abhishek Shetty"
+
+  # ── 2019 ──────────────────────────────────────────────────────────────────
+
+  - venue: "Conference on Learning Theory"
+    venue_short: "COLT"
+    type: conference
+    year: 2019
+    title: "Efficiency of the floating body as a robust measure of dispersion"
+    authors: "Joseph Anderson, Luis Rademacher"
+
+  - venue: "Information and Inference: A Journal of the IMA"
+    venue_short: "Information and Inference"
+    type: journal
+    year: 2019
+    title: "Hanson-Wright inequality in Hilbert spaces with application to K-means clustering for non-Euclidean data"
+    authors: "Xiaohui Chen, Yun Yang"
+
+  - venue: "Symposium on Discrete Algorithms"
+    venue_short: "SODA"
+    type: conference
+    year: 2020
+    title: "Efficiency of the floating body as a robust measure of dispersion"
+    authors: "Joseph Anderson, Luis Rademacher"
+
+  # ── 2020 ──────────────────────────────────────────────────────────────────
+
+  - venue: "Annals of Applied Statistics"
+    venue_short: "AoAS"
+    type: journal
+    year: 2020
+    title: "Robust Causal Inference for Incremental Return on Ad Spend with Randomized Paired Geo Experiments"
+    authors: "Aiyou Chen, Tim Au"
+
+  - venue: "Proceedings of the National Academy of Sciences"
+    venue_short: "PNAS"
+    type: journal
+    year: 2020
+    title: "Evaluating Probabilistic Classifiers: Reliability Diagrams and Score Decompositions Revisited"
+    authors: "Timo Dimitriadis, Tilmann Gneiting, Alexander I. Jordan"
+
+  # ── 2021 ──────────────────────────────────────────────────────────────────
+
+  - venue: "International Conference on Artificial Intelligence and Statistics"
+    venue_short: "AISTATS"
+    type: conference
+    year: 2021
+    title: "Treatment Targeting by AUUC Maximization with Generalization Guarantees"
+
+  - venue: "International Conference on Artificial Intelligence and Statistics"
+    venue_short: "AISTATS"
+    type: conference
+    year: 2021
+    title: "Eﬃcient Adaptive Experimental Design for Average Treatment Eﬀect Estimation with Nonparametric Sequential Testing"
+
+  - venue: "International Conference on Artificial Intelligence and Statistics"
+    venue_short: "AISTATS"
+    type: conference
+    year: 2021
+    title: "Treatment Targeting by AUUC Maximization with Generalization Guarantees"
+
+  # ── 2022 ──────────────────────────────────────────────────────────────────
+
+  - venue: "Journal of the Royal Statistical Society: Series B"
+    venue_short: "JRSS-B"
+    type: journal
+    year: 2022
+    title: "Regression Diagnostics meets Forecast Evaluation: Conditional Calibration, Reliability Diagrams, and Coefficient of Determination"
+    authors: "Tilmann Gneiting, Johannes Resin"
+
+  # ── 2023 ──────────────────────────────────────────────────────────────────
+
+  - venue: "Conference on Neural Information Processing Systems"
+    venue_short: "NeurIPS"
+    type: conference
+    year: 2023
+    title: "Conformal Prediction via Regression-as-Classification"
+
+  - venue: "IEEE Transactions on Information Theory"
+    venue_short: "IEEE TIT"
+    type: journal
+    year: 2023
+    title: "Classification Tree Pruning Under Covariate Shift"
+    authors: "Nicholas Galbraith, Samory Kpotufe"
+
+  # ── 2024 ──────────────────────────────────────────────────────────────────
+
+  - venue: "International Conference on Artificial Intelligence and Statistics"
+    venue_short: "AISTATS"
+    type: conference
+    year: 2024
+    title: "Fast Estimation of Partial Dependence Functions using Trees"
+
+  - venue: "International Conference on Artificial Intelligence and Statistics"
+    venue_short: "AISTATS"
+    type: conference
+    year: 2024
+    title: "Modifying Final Splits of Classification Tree for Fine-tuning Subpopulation Target in Policy Making"
+
+  - venue: "Biometrika"
+    type: journal
+    year: 2024
+    title: "Determining Number of Factors under Stability Considerations"
+    authors: "Sze Ming Lee, Yunxiao Chen"
+
+  - venue: "Electronic Journal of Statistics"
+    venue_short: "EJS"
+    type: journal
+    year: 2024
+    title: "On Mixing Rates for Bayesian CART"
+    authors: "Jungeum Kim, Veronika Rockova"
+
+  - venue: "Journal of the American Statistical Association"
+    venue_short: "JASA"
+    type: journal
+    year: 2024
+    title: "Adaptive Split Balancing for Optimal Random Forest"
+    authors: "Yuqian Zhang, Weijie Ji, Jelena Brandic"
+
+  - venue: "Journal of Data Science"
+    type: journal
+    year: 2024
+    title: "ReLU-ReHU Representations of Piecewise Linear-Quadratic Losses"
+    authors: Tingxian Gao, Ben Dai, Yixuan Qiu"
+
+  - venue: "Journal of the Royal Statistical Society: Series B"
+    venue_short: "JRSS-B"
+    type: journal
+    year: 2024
+    title: "On Mixing Rates for Bayesian CART"
+    authors: "Jungeum Kim, Veronika Rockova"
+
+
+  # ── 2025 ──────────────────────────────────────────────────────────────────
+
+  - venue: "Annals of Statistics"
+    venue_short: "AoS"
+    type: journal
+    year: 2025
+    title: "On the Pointwise and Sup-Norm Errors for Local Regression Estimators"
+    authors: "Jeremy Bettinger, Francois Portier, Adrien Saumard"
+
+  - venue: "Bernoulli"
+    type: journal
+    year: 2025
+    title: "Minimax Decision Trees via Martingale Approximations"
+    authors: "Zhenyuan Zhang, Hengrui Luo"
+
+  - venue: "Journal of the American Statistical Association"
+    venue_short: "JASA"
+    type: journal
+    year: 2025
+    title: "Extracting Interpretable Models from Tree Ensembles: Computational and Statistical Perspectives"
+    authors: "Brian Liu, Rahul Mazumder, Peter Radchenko"
+
+  - venue: "Journal of Machine Learning Research"
+    venue_short: "JMLR"
+    type: journal
+    year: 2025
+    title: "Exogenous Randomness Empowering Random Forests"
+    authors: "Tianxing Mei, Yingying Fan, Jinchi Lv"
+
+  - venue: "Conference on Neural Information Processing Systems"
+    venue_short: "NeurIPS"
+    type: conference
+    year: 2025
+    title: "GAMformer: Exploring In-Context Learning for Generalized Additive Models"
+
+  - venue: "Conference on Neural Information Processing Systems"
+    venue_short: "NeurIPS"
+    type: conference
+    year: 2025
+    title: "A Goemans-Williamson type algorithm for identifying subcohorts in clinical trials"
+
+  - venue: "Conference on Neural Information Processing Systems"
+    venue_short: "NeurIPS"
+    type: conference
+    year: 2025
+    title: "Tight Detection Boundaries for Additive Tree Models in High-Dimensional Regression: A Minimax Risk Perspective"
+
+  - venue: "Conference on Neural Information Processing Systems"
+    venue_short: "NeurIPS"
+    type: conference
+    year: 2025
+    title: "Random Feature Selection: From Accuracy Inflation to Performance Improvement on Small Datasets"
+
+  - venue: "Conference on Neural Information Processing Systems"
+    venue_short: "NeurIPS"
+    type: conference
+    year: 2025
+    title: "Beyond the ATE: Interpretable Modelling of Treatment Effects over Dose and Time"
+
+  - venue: "Scandinavian Journal of Statistics"
+    type: journal
+    year: 2026
+    title: "Composite Quantile Super Learner"
+    authors: "Tao Wang"
+
+  - venue: "Science China"
+    type: journal
+    year: 2025
+    title: "Optimal Weighted Fréchet Random Forest for Metric Space Valued Responses with Euclidean Predictors"
+    authors: "Xin Ai, Tao Huang, Wen Liang Pan, Yuan Yu"
+
+  - venue: "Statistical Methods in Medical Research"
+    type: journal
+    year: 2025
+    title: "Evaluating and Testing for Actionable Treatment Effect Heterogeneity"
+    authors: "Mahsa Ashouri, Nicholas C. Henderson"
+
+  # ── 2026 ──────────────────────────────────────────────────────────────────
+
+  - venue: "IEEE Transactions on Information Theory"
+    venue_short: "IEEE TIT"
+    type: journal
+    year: 2026
+    title: "Covariance-Driven Regression Trees: Reducing Overfitting in CART"
+    authors: "Likun Zhang, Wei Ma"
+
+  - venue: "Journal of Machine Learning Research"
+    venue_short: "JMLR"
+    type: journal
+    year: 2026
+    title: "Early Stopping for Regression Trees"
+    authors: "Ratmir Miftachov, Markus Reiß"
+
+  - venue: "Statistical Methods in Medical Research"
+    type: journal
+    year: 2026
+    title: "Tree-based predictive models for noisy input data"
+    authors: "Kevin McCoy, Zachary Wooten, Christine B. Peterson"
+
+# ── Other Service ─────────────────────────────────────────────────────────────
 other_service:
   - title: "Graduate Research Committee Member"
     organization: "Department of Statistics and Data Science, National University of Singapore"
