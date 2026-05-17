@@ -53,7 +53,7 @@ teaching:
     institution: "University of Michigan"
     role: "Instructor of Record"
     level: "Undergraduate"
-    semesters: ["Fall 2013 – Winter 2018 (1 semester)"]
+    semesters: ["Fall 2015"]
     enrollment: 20
     notes: "Section of 20–25 students; responsible for lecturing, group work, materials, and grading."
 
@@ -62,7 +62,7 @@ teaching:
     institution: "University of Michigan"
     role: "Instructor of Record"
     level: "Undergraduate"
-    semesters: ["Fall 2013 – Winter 2018 (3 semesters)"]
+    semesters: ["Fall 2013", "Fall 2014", "Winter 2016"]
     enrollment: 20
     notes: "Section of 20–25 students; responsible for lecturing, group work, materials, and grading."
 
@@ -71,7 +71,7 @@ teaching:
     institution: "University of Michigan"
     role: "Instructor of Record"
     level: "Undergraduate"
-    semesters: ["Fall 2013 – Winter 2018 (2 semesters)"]
+    semesters: ["Winter 2014, Winter 2015"]
     enrollment: 20
     notes: "Section of 20–25 students; responsible for lecturing, group work, materials, and grading."
 
@@ -80,7 +80,7 @@ teaching:
     institution: "University of Michigan"
     role: "Teaching Assistant"
     level: "Undergraduate"
-    semesters: ["Fall 2013 – Winter 2018 (1 semester)"]
+    semesters: ["Spring 2014"]
     notes: "Led lab tutorial sessions and graded."
 
   - course_code: null
@@ -88,7 +88,7 @@ teaching:
     institution: "University of Michigan"
     role: "Teaching Assistant"
     level: "Undergraduate"
-    semesters: ["Fall 2013 – Winter 2018 (1 semester)"]
+    semesters: ["Winter 2018"]
     notes: "Led lab tutorial sessions and graded."
 
   - course_code: null
@@ -96,6 +96,6 @@ teaching:
     institution: "University of Michigan"
     role: "Course Co-coordinator"
     level: "Undergraduate"
-    semesters: ["Fall 2013 – Winter 2018 (1 semester)"]
+    semesters: ["Fall 2017"]
     enrollment: 500
     notes: "Co-coordinated a course of ~500 students. Trained and supervised new instructors; wrote homework and exams."
