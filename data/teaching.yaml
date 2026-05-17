@@ -50,7 +50,7 @@ teaching:
     level: "PhD"
     semesters: ["Spring 2020"]
     semester_links:
-      "Spring 2020": "https://stat210b.berkeley.edu/""
+      "Spring 2020": "https://stat210b.berkeley.edu/"
     enrollment: null
     description: >
       Second course on theoretical statistics for PhD students, focusing on

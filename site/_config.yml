@@ -15,7 +15,7 @@ nav_pages:
   - { title: "Talks",        url: "/talks/"        }
   - { title: "Students",     url: "/students/"     }
   - { title: "Teaching",     url: "/teaching/"     }
-  - { title: "Photos",       url: "/photos/"       }
+  - { title: "Stats",        url: "/stats/"        }
 
 # CV link
 cv_url: "/assets/cv.pdf"   # place a compiled cv.pdf here

@@ -233,6 +233,87 @@ def enrich_poster(poster):
     """Same enrichment as talks."""
     return enrich_talk(poster)
 
+# ── Stats computation ─────────────────────────────────────────────────────────
+
+def compute_stats(all_pubs, reviewing_flat, talks_raw, posters_raw, students_data):
+    from collections import Counter
+    import datetime
+    current_year = datetime.date.today().year
+
+    # ── Collaborators ──────────────────────────────────────────────────────────
+    coauthor_counts = Counter()
+    for pub in all_pubs:
+        if pub.get("type") == "inprep":
+            continue
+        for author in pub.get("authors", []):
+            name = author["name"]
+            if name != SELF_NAME:
+                coauthor_counts[first_last(name)] += 1
+    collaborators = [
+        {"name": name, "papers": count}
+        for name, count in sorted(coauthor_counts.items(), key=lambda x: -x[1])
+    ]
+
+    # ── Publications ───────────────────────────────────────────────────────────
+    pub_counts = {"journal": 0, "conference": 0, "preprint": 0, "total": 0}
+    for pub in all_pubs:
+        if pub.get("type") == "inprep":
+            continue
+        t = pub.get("type", "other")
+        status = pub.get("status", "preprint")
+        if t == "journal" and status in ("published", "accepted"):
+            pub_counts["journal"] += 1
+        elif t == "conference" and status in ("published", "accepted"):
+            pub_counts["conference"] += 1
+        elif status == "preprint":
+            pub_counts["preprint"] += 1
+        pub_counts["total"] += 1
+
+    # ── Reviewing ─────────────────────────────────────────────────────────────
+    journal_rev  = sum(1 for r in reviewing_flat if r.get("type") == "journal")
+    conf_rev     = sum(1 for r in reviewing_flat if r.get("type") == "conference")
+
+    # ── Talks ─────────────────────────────────────────────────────────────────
+    talk_instances   = sum(len(t.get("instances", [])) for t in talks_raw)
+    poster_instances = sum(len(p.get("instances", [])) for p in posters_raw)
+    locations = sorted({
+        inst["location"]
+        for collection in (talks_raw, posters_raw)
+        for item in collection
+        for inst in item.get("instances", [])
+        if inst.get("location")
+    })
+
+    # ── Students ──────────────────────────────────────────────────────────────
+    students = students_data.get("students", [])
+    current   = [s for s in students if s.get("expected") and (s.get("year_end") or 0) >= current_year]
+    graduated = [s for s in students if not s.get("expected") or (s.get("year_end") or 0) < current_year]
+    def count_by_degree(lst):
+        c = Counter(s.get("degree", "Other") for s in lst)
+        return dict(c)
+
+    return {
+        "collaborators": collaborators,
+        "publications": pub_counts,
+        "reviewing": {
+            "total":      journal_rev + conf_rev,
+            "journal":    journal_rev,
+            "conference": conf_rev,
+        },
+        "talks": {
+            "total_instances":   talk_instances,
+            "poster_instances":  poster_instances,
+            "unique_locations":  locations,
+            "num_locations":     len(locations),
+        },
+        "students": {
+            "current_count":    len(current),
+            "graduated_count":  len(graduated),
+            "current_by_degree":   count_by_degree(current),
+            "graduated_by_degree": count_by_degree(graduated),
+        },
+    }
+
 # ── Teaching processing ───────────────────────────────────────────────────────
 
 def enrich_teaching(course):
@@ -281,6 +362,16 @@ def main():
     dump({"publications": journals},  SITE_DATA / "journal_pubs.yaml")
     dump({"publications": confs},     SITE_DATA / "conf_pubs.yaml")
     dump({"publications": preprints}, SITE_DATA / "preprints.yaml")
+
+    # Stats — computed from all data sources
+    stats = compute_stats(
+        all_pubs      = load("publications.yaml")["publications"],
+        reviewing_flat= load("service.yaml").get("reviewing", []),
+        talks_raw     = talks_raw,
+        posters_raw   = posters_raw,
+        students_data = load("students.yaml"),
+    )
+    dump(stats, SITE_DATA / "stats.yaml")
 
     print("Done.")
 
