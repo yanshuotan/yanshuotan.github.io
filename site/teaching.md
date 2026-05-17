@@ -20,7 +20,7 @@ permalink: /teaching/
     </span>
     <span class="course-meta">{{ course.level }} · {{ course.role }}</span>
   </div>
-  <div class="course-meta">{{ course.semesters | join: ", " }}</div>
+  <div class="course-meta">{% for s in course.semesters_enriched %}{% if s.url %}<a href="{{ s.url }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</div>
   {% if course.description %}
     <div class="course-desc">{{ course.description }}</div>
   {% endif %}

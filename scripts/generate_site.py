@@ -233,6 +233,18 @@ def enrich_poster(poster):
     """Same enrichment as talks."""
     return enrich_talk(poster)
 
+# ── Teaching processing ───────────────────────────────────────────────────────
+
+def enrich_teaching(course):
+    """Add semesters_enriched: list of {name, url} for each semester."""
+    c = dict(course)
+    links = course.get("semester_links") or {}
+    c["semesters_enriched"] = [
+        {"name": s, "url": links.get(s)}
+        for s in course.get("semesters", [])
+    ]
+    return c
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -245,8 +257,9 @@ def main():
     # Students — pass through
     dump(load("students.yaml"), SITE_DATA / "students.yaml")
 
-    # Teaching — pass through
-    dump(load("teaching.yaml"), SITE_DATA / "teaching.yaml")
+    # Teaching — enrich with per-semester links
+    teaching_raw = load("teaching.yaml")["teaching"]
+    dump({"teaching": [enrich_teaching(c) for c in teaching_raw]}, SITE_DATA / "teaching.yaml")
 
     # Service — aggregate flat reviewing list into per-venue groups
     service_raw = load("service.yaml")

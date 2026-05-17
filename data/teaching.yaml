@@ -6,6 +6,11 @@ teaching:
     role: "Instructor"
     level: "Masters"
     semesters: ["Semester II 2023", "Semester II 2024", "Semester II 2025", "Semester II 2026"]
+    semester_links:
+      "Semester II 2023": "https://github.com/yanshuotan/st5209-2023"
+      "Semester II 2024": "https://github.com/yanshuotan/st5209-2024"
+      "Semester II 2025": "https://github.com/yanshuotan/st5209-2025"
+      "Semester II 2026": "https://github.com/yanshuotan/st5209-2026"
     enrollment: null
     description: null
     notes: null
@@ -26,6 +31,8 @@ teaching:
     role: "Instructor"
     level: "Undergraduate"
     semesters: ["Spring 2021"]
+    semester_links:
+      "Spring 2021": "https://data102.org/sp21"
     enrollment: 250
     description: >
       Capstone course for the data science major. Develops the probabilistic
@@ -42,6 +49,8 @@ teaching:
     role: "Instructor"
     level: "PhD"
     semesters: ["Spring 2020"]
+    semester_links:
+      "Spring 2020": "https://stat210b.berkeley.edu/""
     enrollment: null
     description: >
       Second course on theoretical statistics for PhD students, focusing on
@@ -63,6 +72,10 @@ teaching:
     role: "Instructor of Record"
     level: "Undergraduate"
     semesters: ["Fall 2013", "Fall 2014", "Winter 2016"]
+    semester_links:
+      "Fall 2013": "https://courses.lsa.umich.edu/math-115/"
+      "Fall 2014": "https://courses.lsa.umich.edu/math-115/"
+      "Winter 2016": "https://courses.lsa.umich.edu/math-115/"
     enrollment: 20
     notes: "Section of 20–25 students; responsible for lecturing, group work, materials, and grading."
 
@@ -72,6 +85,9 @@ teaching:
     role: "Instructor of Record"
     level: "Undergraduate"
     semesters: ["Winter 2014, Winter 2015"]
+    semester_links:
+      "Winter 2014": "https://courses.lsa.umich.edu/math-116/"
+      "Winter 2015": "https://courses.lsa.umich.edu/math-116/"
     enrollment: 20
     notes: "Section of 20–25 students; responsible for lecturing, group work, materials, and grading."
 
@@ -81,6 +97,8 @@ teaching:
     role: "Teaching Assistant"
     level: "Undergraduate"
     semesters: ["Spring 2014"]
+    semester_links:
+      "Spring 2014": "https://courses.lsa.umich.edu/math-215/"
     notes: "Led lab tutorial sessions and graded."
 
   - course_code: null
@@ -89,6 +107,8 @@ teaching:
     role: "Teaching Assistant"
     level: "Undergraduate"
     semesters: ["Winter 2018"]
+    semester_links:
+      "Winter 2018": "https://courses.lsa.umich.edu/math-216/"
     notes: "Led lab tutorial sessions and graded."
 
   - course_code: null
@@ -97,5 +117,7 @@ teaching:
     role: "Course Co-coordinator"
     level: "Undergraduate"
     semesters: ["Fall 2017"]
+    semester_links:
+      "Fall 2017": "https://courses.lsa.umich.edu/math-105/"  
     enrollment: 500
     notes: "Co-coordinated a course of ~500 students. Trained and supervised new instructors; wrote homework and exams."
