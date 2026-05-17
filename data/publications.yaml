@@ -285,7 +285,7 @@ publications:
 
   - key: tan2024computational
     topics: ["BART", "Bayesian", "trees", "theory"]
-    title: "The Computational Curse of Big Data for Bayesian Additive Regression Trees: A Hitting Time Analysis"
+    title: "On the Computational Efficiency of Bayesian Additive Regression Trees: An Asymptotic Analysis"
     authors:
       - name: "Tan, Yan Shuo"
       - name: "Ronen, Omer"
@@ -336,7 +336,7 @@ publications:
     url: "https://jmlr.org/papers/v24/20-902.html"
 
   - key: agarwal2023mdi
-    topics: ["ensembles", "interpretability"]
+    topics: ["ensembles", "interpretability", "trees"]
     title: "Integrating Random Forests and Generalized Linear Models for Improved Accuracy and Interpretability"
     authors:
       - name: "Agarwal, Abhineet"
