@@ -368,26 +368,6 @@ def build_news_feed(news_manual, all_pubs, students_data, cutoff_year):
             "url":          url,
         })
 
-    # ── Auto: new students / postdocs ─────────────────────────────────────────
-    for student in students_data.get("students", []):
-        year_start = student.get("year_start") or 0
-        if year_start < cutoff_year:
-            continue
-        name   = student.get("name", "")
-        degree = student.get("degree", "")
-        date_str = f"{year_start}-08"   # typical semester start
-        if degree == "Postdoc":
-            text = f"{name} joins the group as a postdoc."
-        else:
-            text = f"{name} joins the group as a {degree} student."
-        items.append({
-            "date":         date_str,
-            "date_display": str(year_start),
-            "category":     "student",
-            "text":         text,
-            "url":          None,
-        })
-
     items.sort(key=lambda x: x["date"], reverse=True)
     return items
 

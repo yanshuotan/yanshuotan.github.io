@@ -4,17 +4,12 @@
 #
 # ── Schema ───────────────────────────────────────────────────────────────────
 #   date      (string)  YYYY-MM or YYYY-MM-DD, used for sorting and display
-#   category  (string)  award | hiring | other
+#   category  (string)  award | hiring | other  (paper and student are auto-generated)
 #   text      (string)  News text (plain, no markdown)
 #   url       (string, opt)  Optional link (e.g. grant page, job ad)
 # ─────────────────────────────────────────────────────────────────────────────
 
 news:
-
-  - date: "2026-05"
-    category: "hiring"
-    text: "I am looking for motivated PhD students and postdocs to join the group. Please get in touch if you are interested."
-    url: null
 
   - date: "2026-05-01"
     category: "award"
