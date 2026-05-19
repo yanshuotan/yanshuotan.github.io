@@ -247,6 +247,46 @@ h2.section-heading {
   font-style: italic;
 }
 
+/* ── News feed ───────────────────────────────────────────────────────────────  */
+.news-list {
+  list-style: none;
+  margin: 0.5rem 0 1rem;
+  padding: 0;
+}
+.news-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+.news-item:last-child { border-bottom: none; }
+.news-date {
+  flex-shrink: 0;
+  min-width: 5.5rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+.news-badge {
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.news-badge--paper   { background: #dbeafe; color: #1e40af; }
+.news-badge--award   { background: #fef3c7; color: #92400e; }
+.news-badge--hiring  { background: #ede9fe; color: #5b21b6; }
+.news-badge--student { background: #d1fae5; color: #065f46; }
+.news-badge--talk    { background: #e0f2fe; color: #0369a1; }
+.news-badge--other   { background: var(--bg-light); color: var(--muted); }
+.news-text { flex: 1; }
+
 /* ── Topic filters ───────────────────────────────────────────────────────────  */
 .topic-filters {
   display: flex;

@@ -1,0 +1,28 @@
+# news.yaml
+# Manual news entries — paper acceptances, talk highlights, and new students
+# are auto-generated from their respective YAML files.
+#
+# ── Schema ───────────────────────────────────────────────────────────────────
+#   date      (string)  YYYY-MM or YYYY-MM-DD, used for sorting and display
+#   category  (string)  award | hiring | other
+#   text      (string)  News text (plain, no markdown)
+#   url       (string, opt)  Optional link (e.g. grant page, job ad)
+# ─────────────────────────────────────────────────────────────────────────────
+
+news:
+
+  - date: "2026-05"
+    category: "hiring"
+    text: "I am looking for motivated PhD students and postdocs to join the group. Please get in touch if you are interested."
+    url: null
+
+  - date: "2026-05-01"
+    category: "award"
+    text: "Awarded an NUS Cross Faculty Grant together with Bibhas Chakraborty for our project 'Towards Personalized Healthcare via Bayesian Machine Learning'."
+    url: null
+
+  # Example award entry — fill in and uncomment when ready:
+  # - date: "2026-01"
+  #   category: "award"
+  #   text: "Awarded [Grant Name] from [Funding Agency]."
+  #   url: null

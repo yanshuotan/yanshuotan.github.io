@@ -22,6 +22,26 @@ permalink: /
 
 {{ site.data.profile.bio }}
 
+<h2 class="section-heading">News</h2>
+
+<ul class="news-list">
+{% for item in site.data.news.news limit:8 %}
+<li class="news-item">
+  <span class="news-date">{{ item.date_display }}</span>
+  <span class="news-badge news-badge--{{ item.category }}">{{ item.category }}</span>
+  <span class="news-text">
+    {% if item.url and item.title %}
+      <a href="{{ item.url }}">{{ item.title }}</a> — {{ item.text }}
+    {% elsif item.url %}
+      <a href="{{ item.url }}">{{ item.text }}</a>
+    {% else %}
+      {{ item.text }}
+    {% endif %}
+  </span>
+</li>
+{% endfor %}
+</ul>
+
 <h2 class="section-heading">Selected Publications</h2>
 
 <ul class="pub-list">

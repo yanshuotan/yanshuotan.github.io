@@ -314,6 +314,83 @@ def compute_stats(all_pubs, reviewing_flat, talks_raw, posters_raw, students_dat
         },
     }
 
+# ── News feed ────────────────────────────────────────────────────────────────
+
+def fmt_news_date(date_str):
+    """Format 'YYYY-MM' or 'YYYY-MM-DD' → 'Mon YYYY'; 'YYYY' → 'YYYY'."""
+    parts = str(date_str).split("-")
+    if len(parts) >= 2:
+        try:
+            return f"{_MONTHS[int(parts[1]) - 1]} {parts[0]}"
+        except (ValueError, IndexError):
+            pass
+    return date_str
+
+def build_news_feed(news_manual, all_pubs, students_data, cutoff_year):
+    """
+    Merge manual news entries with auto-generated items from publications
+    and new students. Returns list sorted by date descending.
+    """
+    items = []
+
+    # ── Manual entries (awards, hiring, etc.) ─────────────────────────────────
+    for entry in news_manual.get("news", []):
+        items.append({
+            "date":         str(entry["date"]),
+            "date_display": fmt_news_date(str(entry["date"])),
+            "category":     entry.get("category", "other"),
+            "text":         entry.get("text", ""),
+            "url":          entry.get("url"),
+        })
+
+    # ── Auto: recent paper acceptances / publications ─────────────────────────
+    for pub in all_pubs:
+        year = pub.get("year") or 0
+        if year < cutoff_year:
+            continue
+        status = pub.get("status", "preprint")
+        if status not in ("published", "accepted"):
+            continue
+        if pub.get("type") in ("thesis", "other", "inprep"):
+            continue
+        venue = pub.get("venue_short") or pub.get("venue", "")
+        date_str = f"{year}-07"   # mid-year proxy
+        verb = "published in" if status == "published" else "accepted at"
+        url = pub.get("url") or (
+            f"https://arxiv.org/abs/{pub['arxiv']}" if pub.get("arxiv") else None
+        )
+        items.append({
+            "date":         date_str,
+            "date_display": str(year),
+            "category":     "paper",
+            "text":         f"Paper {verb} <em>{html_escape(venue)}</em>.",
+            "title":        pub.get("title"),
+            "url":          url,
+        })
+
+    # ── Auto: new students / postdocs ─────────────────────────────────────────
+    for student in students_data.get("students", []):
+        year_start = student.get("year_start") or 0
+        if year_start < cutoff_year:
+            continue
+        name   = student.get("name", "")
+        degree = student.get("degree", "")
+        date_str = f"{year_start}-08"   # typical semester start
+        if degree == "Postdoc":
+            text = f"{name} joins the group as a postdoc."
+        else:
+            text = f"{name} joins the group as a {degree} student."
+        items.append({
+            "date":         date_str,
+            "date_display": str(year_start),
+            "category":     "student",
+            "text":         text,
+            "url":          None,
+        })
+
+    items.sort(key=lambda x: x["date"], reverse=True)
+    return items
+
 # ── Teaching processing ───────────────────────────────────────────────────────
 
 def enrich_teaching(course):
@@ -362,6 +439,14 @@ def main():
     dump({"publications": journals},  SITE_DATA / "journal_pubs.yaml")
     dump({"publications": confs},     SITE_DATA / "conf_pubs.yaml")
     dump({"publications": preprints}, SITE_DATA / "preprints.yaml")
+
+    # News feed — manual entries merged with auto-generated items
+    import datetime
+    cutoff_year = datetime.date.today().year - 2
+    news_manual = load("news.yaml")
+    news_items  = build_news_feed(news_manual, load("publications.yaml")["publications"],
+                                  load("students.yaml"), cutoff_year)
+    dump({"news": news_items}, SITE_DATA / "news.yaml")
 
     # Stats — computed from all data sources
     stats = compute_stats(
