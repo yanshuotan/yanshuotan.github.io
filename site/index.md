@@ -11,9 +11,9 @@ permalink: /
     <p class="affiliation">{{ site.data.profile.department }}<br>{{ site.data.profile.institution }}</p>
     <div class="profile-links">
       {% for link in site.data.profile.cv_links %}
-        <a href="{{ link.url }}">{{ link.text }}</a>
+        <a href="{{ link.url }}">{% if link.web_icon %}<i class="fa {{ link.web_icon }}" aria-hidden="true"></i> {% endif %}{{ link.text }}</a>
       {% endfor %}
-      <a href="{{ site.cv_url | relative_url }}">CV</a>
+      <a href="{{ site.cv_url | relative_url }}"><i class="fa fa-file-text-o" aria-hidden="true"></i> CV</a>
     </div>
   </div>
 </div>

@@ -13,15 +13,18 @@ address: "Singapore"
 cv_links:
   - label: "email"
     icon: "\\faEnvelope"
+    web_icon: "fa-envelope"
     url: "mailto:yanshuo@nus.edu.sg"
     text: "yanshuo@nus.edu.sg"
   - label: "linkedin"
     icon: "\\faLinkedin"
-    url: "https://www.linkedin.com/in/yan-shuo-tan-3262051a6/"   # update this
+    web_icon: "fa-linkedin"
+    url: "https://www.linkedin.com/in/yan-shuo-tan-3262051a6/"
     text: "LinkedIn"
   - label: "google_scholar"
     icon: "\\faGraduationCap"
-    url: "https://scholar.google.com/citations?user=iZY2OUcAAAAJ"   # update this
+    web_icon: "fa-graduation-cap"
+    url: "https://scholar.google.com/citations?user=iZY2OUcAAAAJ"
     text: "Google Scholar"
 
 # Short bio for the website homepage
