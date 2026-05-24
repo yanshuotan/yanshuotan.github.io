@@ -9,7 +9,7 @@
 #   make clean    - Remove generated files
 # ────────────────────────────────────────────────────────────────────────────
 
-PYTHON     := python3
+PYTHON     ?= python
 PDFLATEX   := pdflatex
 JEKYLL     := bundle exec jekyll
 

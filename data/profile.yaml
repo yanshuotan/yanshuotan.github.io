@@ -15,10 +15,14 @@ cv_links:
     icon: "\\faEnvelope"
     url: "mailto:yanshuo@nus.edu.sg"
     text: "yanshuo@nus.edu.sg"
-  - label: "website"
-    icon: "\\faHome"
-    url: "https://yanshuotan.github.io"
-    text: "yanshuotan.github.io"
+  - label: "linkedin"
+    icon: "\\faLinkedin"
+    url: "https://www.linkedin.com/in/yan-shuo-tan-3262051a6/"   # update this
+    text: "LinkedIn"
+  - label: "google_scholar"
+    icon: "\\faGraduationCap"
+    url: "https://scholar.google.com/citations?user=iZY2OUcAAAAJ"   # update this
+    text: "Google Scholar"
 
 # Short bio for the website homepage
 bio: >

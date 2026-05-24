@@ -5,6 +5,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{color,xcolor,enumitem}
+\usepackage{fontawesome}
 
 \hypersetup{
   colorlinks=true, urlcolor=black, linkcolor=black,
@@ -35,7 +36,7 @@
 \address{%
 \\[-3mm]
 <% for link in profile.cv_links %>
-\href{<< link.url >>}{{\footnotesize << link.text >>}}%
+<< link.icon >>~\href{<< link.url >>}{{\footnotesize << link.text >>}}%
 <% if not loop.last %>\quad<% endif %>
 <% endfor %>
 }
@@ -104,8 +105,8 @@
 
 % ── Journal Publications ─────────────────────────────────────────────────────
 \section{\sc Journal \\ Publications}
-{\footnotesize ($\eqc$~equal contribution or alphabetical ordering,\;
-$\sv$~student/postdoc supervised,\;
+{\footnotesize ($\eqc$~equal contribution or alphabetical ordering,\enspace
+$\sv$~student/postdoc supervised,\enspace
 $\corr$~corresponding author)}
 
 \begin{enumerate}\itemsep0.3em
@@ -117,7 +118,7 @@ $\corr$~corresponding author)}
     ``<< pub.title | esc >>'',
     <% endif %>
     << pub | fmt_venue >>%
-    <% if pub.awards %>\;[\textbf{<% for a in pub.awards %><< a | esc >><% if not loop.last %>; <% endif %><% endfor %>}]<% endif %>.
+    <% if pub.awards %>\enspace[\textbf{<% for a in pub.awards %><< a | esc >><% if not loop.last %>; <% endif %><% endfor %>}]<% endif %>.
 
 <% endfor %>
 \end{enumerate}
@@ -135,7 +136,7 @@ $\corr$~corresponding author)}
     ``<< pub.title | esc >>'',
     <% endif %>
     << pub | fmt_venue >>%
-    <% if pub.awards %>\;[\textbf{<% for a in pub.awards %><< a | esc >><% if not loop.last %>; <% endif %><% endfor %>}]<% endif %>.
+    <% if pub.awards %>\enspace[\textbf{<% for a in pub.awards %><< a | esc >><% if not loop.last %>; <% endif %><% endfor %>}]<% endif %>.
 
 <% endfor %>
 \end{enumerate}

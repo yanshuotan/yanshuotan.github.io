@@ -7,6 +7,7 @@ Usage:
     python scripts/generate_cv.py
 """
 
+import shutil
 import yaml
 import jinja2
 from pathlib import Path
@@ -141,8 +142,13 @@ def fmt_venue(pub):
         if target:
             return f"major revision at \\textit{{{esc(target)}}}"
         return "major revision"
-    # under_review / minor_revision: show no label, just year
-    if review in ("under_review", "minor_revision"):
+    if review == "minor_revision":
+        target = notes.replace("Minor revision at ", "").replace("minor revision at ", "").strip()
+        if target:
+            return f"minor revision at \\textit{{{esc(target)}}}"
+        return "minor revision"
+    # under_review: show no label, just year
+    if review == "under_review":
         pass
 
     # In-preparation (no venue)
@@ -318,6 +324,10 @@ def main():
     )
 
     OUTPUT_DIR.mkdir(exist_ok=True)
+
+    # Keep the local class file beside cv.tex because pdflatex runs in output/.
+    shutil.copy(TMPL_DIR / "res.cls", OUTPUT_DIR / "res.cls")
+
     out = OUTPUT_DIR / "cv.tex"
     out.write_text(rendered)
     print(f"✓  CV written to {out}")

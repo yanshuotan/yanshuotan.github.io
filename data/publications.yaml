@@ -239,11 +239,11 @@ publications:
     year: 2025
     type: preprint
     status: preprint
-    review_status: major_revision
+    review_status: minor_revision
     venue: "arXiv preprint"
     arxiv: "2505.20003"
     url: "https://arxiv.org/abs/2505.20003"
-    notes: "Major revision at Journal of the American Statistical Association"
+    notes: "Minor revision at Journal of the American Statistical Association"
 
   - key: chen2025revisiting
     topics: ["trees", "ensembles", "theory"]
