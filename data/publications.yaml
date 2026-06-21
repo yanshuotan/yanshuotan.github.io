@@ -129,12 +129,11 @@ publications:
       - name: "Singh, Chandan"
     year: 2026
     type: preprint
-    status: preprint
-    review_status: major_revision
-    venue: "arXiv preprint"
+    status: published
+    venue: "Nature Digital Medicine"
     arxiv: "2601.09072"
     url: "https://arxiv.org/abs/2601.09072"
-    notes: "Major revision at Nature Digital Medicine"
+    # notes: "Major revision at Nature Digital Medicine"
 
   - key: deng2026bfts
     topics: ["BART", "Bayesian", "trees"]

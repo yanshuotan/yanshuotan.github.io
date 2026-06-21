@@ -1,0 +1,73 @@
+# joining.yaml
+# Content for the "Joining" page, advertising open positions in the group.
+#
+# *** ALL TEXT BELOW IS PLACEHOLDER — please review and edit before this
+#     page goes live. ***
+#
+# ── Schema ───────────────────────────────────────────────────────────────────
+#   intro     (string)  General text on what you look for across all
+#                        positions, shown above the list of openings.
+#   positions:
+#     id            (string)        Unique slug (used as an anchor id)
+#     title         (string)        e.g. "PhD Student", "Postdoctoral Researcher"
+#     status        (string)        open | closed
+#     summary       (string)        One-line teaser shown in the collapsed header
+#     description   (list of str)   Paragraphs shown when expanded
+#     deadline      (string, opt)   e.g. "Rolling", "31 December 2026"
+#     how_to_apply  (string, opt)   Instructions for applying
+# ─────────────────────────────────────────────────────────────────────────────
+
+intro: >
+  I am always happy to hear from prospective students and researchers who
+  are excited about statistical machine learning. Beyond technical
+  background, I most value curiosity, persistence in working through hard
+  problems, and the ability to communicate ideas clearly and work well with
+  others in the group. Specific openings are listed below; if none of them
+  fit but you think there's a good match with my research interests, feel
+  free to reach out anyway.
+
+positions:
+
+  - id: "phd-student"
+    title: "PhD Student"
+    status: "open"
+    summary: "Fully-funded PhD positions in statistical machine learning, starting August 2027."
+    description:
+      - >
+        I am recruiting PhD students to join my group in the Department of
+        Statistics and Data Science at NUS, with an expected start date of
+        August 2027. Research directions include tree-based methods and
+        ensembles, Bayesian machine learning, interpretability, and
+        prior-data fitted networks, though students with their own related
+        interests are welcome to discuss other directions.
+      - >
+        Applicants should have a strong quantitative background (statistics,
+        mathematics, computer science, or a related field) and some prior
+        exposure to research, e.g. through a thesis, course project, or
+        publication. Programming experience in Python or R is helpful but
+        not required in advance.
+    deadline: "Rolling — see NUS graduate admissions deadlines for guaranteed funding consideration"
+    how_to_apply: >
+      Apply through the NUS Department of Statistics and Data Science PhD
+      admissions portal, and also feel free to email me directly with your
+      CV, transcript, and a short note on your research interests.
+
+  - id: "postdoc"
+    title: "Postdoctoral Researcher"
+    status: "open"
+    summary: "Postdoc position in Bayesian machine learning, funded by an NUS Cross Faculty Grant."
+    description:
+      - >
+        I have an opening for a postdoctoral researcher to work on Bayesian
+        machine learning methods for personalized healthcare, as part of a
+        project with Bibhas Chakraborty funded by an NUS Cross Faculty
+        Grant. The position is for one year in the first instance, with the
+        possibility of extension.
+      - >
+        Ideal candidates will have a recently completed PhD in statistics,
+        computer science, or a related field, with research experience in
+        Bayesian methods, tree ensembles, or machine learning theory.
+    deadline: "Open until filled"
+    how_to_apply: >
+      Please email me directly with your CV, a brief research statement,
+      and contact details for two references.

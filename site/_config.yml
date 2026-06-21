@@ -15,6 +15,7 @@ nav_pages:
   - { title: "Talks",        url: "/talks/"        }
   - { title: "Students",     url: "/students/"     }
   - { title: "Teaching",     url: "/teaching/"     }
+  - { title: "Joining",      url: "/joining/"      }
   - { title: "Stats",        url: "/stats/"        }
 
 # CV link
