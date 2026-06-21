@@ -11,7 +11,7 @@ permalink: /joining/
 <ul class="opening-list">
 {% for position in site.data.joining.positions %}
 <li>
-<details class="opening">
+<details class="opening" id="{{ position.id }}">
   <summary class="opening-summary">
     <div class="opening-summary-left">
       <span class="opening-title">{{ position.title }}</span>
@@ -30,3 +30,14 @@ permalink: /joining/
 </li>
 {% endfor %}
 </ul>
+
+<script>
+// Auto-expand and scroll to a position if linked via #id (e.g. /joining/#postdoc)
+if (location.hash) {
+  var target = document.querySelector(location.hash);
+  if (target && target.tagName === "DETAILS") {
+    target.open = true;
+    target.scrollIntoView({ block: "start" });
+  }
+}
+</script>

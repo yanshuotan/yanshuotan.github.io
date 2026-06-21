@@ -1,5 +1,13 @@
 # talks.yaml
 talks:
+  - title: "Advancing Sequential Decision-Making Using Bayesian Machine Learning"
+    related_paper: deng2026bfts, tan2026pfn
+    instances:
+      - venue: "USTC School of Computer Science and Technology Seminar"
+        type: seminar
+        location: "Hefei, China"
+        year: 2026
+
   - title: "Understanding the Statistical Gaps in Tree-Based Learning"
     related_paper: null
     instances:
@@ -35,6 +43,10 @@ talks:
         type: conference
         location: "Tokyo, Japan"
         year: 2025
+      - venue: "2026多元分析年会暨九章统计会议"
+        type: conference
+        location: "Lanzhou, China"
+        year: 2026
 
   - title: "Lessons on Mixing for Bayesian Additive Regression Trees"
     related_paper: tan2024computational

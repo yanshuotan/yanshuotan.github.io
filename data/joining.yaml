@@ -1,8 +1,6 @@
 # joining.yaml
 # Content for the "Joining" page, advertising open positions in the group.
 #
-# *** ALL TEXT BELOW IS PLACEHOLDER — please review and edit before this
-#     page goes live. ***
 #
 # ── Schema ───────────────────────────────────────────────────────────────────
 #   intro     (string)  General text on what you look for across all
@@ -39,12 +37,7 @@ positions:
         ensembles, Bayesian machine learning, interpretability,
         prior-data fitted networks, and agentic data science, though students with their own related
         interests are welcome to discuss other directions.
-      - >
-        Applicants should have a strong quantitative background (statistics,
-        mathematics, computer science, or a related field) and some prior
-        exposure to research, e.g. through a thesis, course project, or
-        publication. Programming experience in Python or R is helpful but
-        not required in advance.
+
     deadline: "See NUS Department of Statistics and Data Science PhD admissions portal for deadlines"
     how_to_apply: >
       Apply through the <a href="https://www.stat.nus.edu.sg/education/graduate/phd-in-statistics-and-data-science/prospective-students/">NUS Department of Statistics and Data Science PhD
@@ -81,5 +74,6 @@ positions:
         statistical and computational principles.
     deadline: "Open until filled"
     how_to_apply: >
-      Please email me directly with your CV, a brief research statement,
+      Please email me directly with your CV, a brief research statement, 
+      a representative publication,
       and contact details for two references.

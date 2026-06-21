@@ -18,6 +18,19 @@ permalink: /
   </div>
 </div>
 
+{% assign open_positions = site.data.joining.positions | where: "status", "open" %}
+{% if open_positions.size > 0 %}
+<div class="hiring-banner">
+{% for position in open_positions %}
+  <div class="hiring-banner-item">
+    <span class="hiring-banner-badge">Now hiring</span>
+    <span class="hiring-banner-text">{{ position.title }} — {{ position.summary }}</span>
+    <a class="hiring-banner-link" href="{{ '/joining/' | relative_url }}#{{ position.id }}">Learn more →</a>
+  </div>
+{% endfor %}
+</div>
+{% endif %}
+
 ## About
 
 {{ site.data.profile.bio }}
