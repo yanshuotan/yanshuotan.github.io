@@ -31,14 +31,13 @@ positions:
   - id: "phd-student"
     title: "PhD Student"
     status: "open"
-    summary: "Fully-funded PhD positions in statistical machine learning, starting August 2027."
+    summary: "Fully-funded PhD positions in statistical machine learning."
     description:
       - >
         I am recruiting PhD students to join my group in the Department of
-        Statistics and Data Science at NUS, with an expected start date of
-        August 2027. Research directions include tree-based methods and
-        ensembles, Bayesian machine learning, interpretability, and
-        prior-data fitted networks, though students with their own related
+        Statistics and Data Science at NUS. Research directions include tree-based methods and
+        ensembles, Bayesian machine learning, interpretability,
+        prior-data fitted networks, and agentic data science, though students with their own related
         interests are welcome to discuss other directions.
       - >
         Applicants should have a strong quantitative background (statistics,
@@ -46,27 +45,40 @@ positions:
         exposure to research, e.g. through a thesis, course project, or
         publication. Programming experience in Python or R is helpful but
         not required in advance.
-    deadline: "Rolling — see NUS graduate admissions deadlines for guaranteed funding consideration"
+    deadline: "See NUS Department of Statistics and Data Science PhD admissions portal for deadlines"
     how_to_apply: >
-      Apply through the NUS Department of Statistics and Data Science PhD
-      admissions portal, and also feel free to email me directly with your
+      Apply through the <a href="https://www.stat.nus.edu.sg/education/graduate/phd-in-statistics-and-data-science/prospective-students/">NUS Department of Statistics and Data Science PhD
+      admissions portal</a>, and also feel free to email me directly with your
       CV, transcript, and a short note on your research interests.
 
   - id: "postdoc"
-    title: "Postdoctoral Researcher"
+    title: "Postdoctoral Research Scholar"
     status: "open"
-    summary: "Postdoc position in Bayesian machine learning, funded by an NUS Cross Faculty Grant."
+    summary: "Two-year postdoc position in Bayesian machine learning for healthcare, funded by an NUS Cross Faculty Grant."
     description:
       - >
-        I have an opening for a postdoctoral researcher to work on Bayesian
-        machine learning methods for personalized healthcare, as part of a
-        project with Bibhas Chakraborty funded by an NUS Cross Faculty
-        Grant. The position is for one year in the first instance, with the
-        possibility of extension.
+        I am hiring a postdoctoral research scholar for a two-year
+        appointment to develop machine learning solutions for healthcare
+        problems, including dynamic treatment regimes, mobile health, and
+        trial simulations. The position is funded by an NUS Cross Faculty
+        Grant on personalized healthcare via Bayesian machine learning, and
+        the successful candidate will be jointly mentored by myself and
+        <a href="https://blog.nus.edu.sg/bibhas/">Bibhas Chakraborty</a>
+        (Duke-NUS Medical School).
       - >
-        Ideal candidates will have a recently completed PhD in statistics,
-        computer science, or a related field, with research experience in
-        Bayesian methods, tree ensembles, or machine learning theory.
+        The work will draw on Bayesian machine learning techniques,
+        including Prior-Data Fitted Networks (PFNs), 
+        Bayesian Additive Regression Trees (BART), 
+        and generative methods for tabular data.
+      - >
+        Day-to-day work spans software development, numerical
+        experimentation with deep learning, proving theorems, academic
+        writing, and communicating with medical collaborators. The postdoc
+        will also mentor PhD, master's, and undergraduate students.
+      - >
+        Ideal candidates have a PhD in statistics, computer science, applied
+        mathematics, or a related field, with a deep understanding of
+        statistical and computational principles.
     deadline: "Open until filled"
     how_to_apply: >
       Please email me directly with your CV, a brief research statement,
